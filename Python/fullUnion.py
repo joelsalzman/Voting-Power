@@ -10,15 +10,13 @@ Created on Thu Nov 21 12:06:41 2019
 # Imports
 import pandas as pd
 import geopandas as gpd
-import os, shapely, json
+import os, shapely, json, time
 from shapely.geometry import shape
 from shapely.geometry.polygon import Polygon
 from shapely.geometry.multipolygon import MultiPolygon
 import sys
-sys.path.append(r"C:\Users\joelj\OneDrive\Documents\Projects\Voting\Python")
+sys.path.append(os.path.join(os.getcwd(), "Python"))
 from useful import *
-
-import time
 
 
 
@@ -107,7 +105,6 @@ def prepShapefiles(forUnion=False):
         shp = shp[shp["DISTRICT"] != "ZZ"]
         shp["DISTRICT"] = shp["DISTRICT"].astype("float64")
         prepped[k] = shp
-        pd.to_file(cgdPath(f"clean_{k}.js"), driver = 'GeoJSON', encoding = "UTF-8")
     
     print("Prepared shapefiles\n")
     return prepped
@@ -121,29 +118,29 @@ def fullUnion(prepped = {}):
     #cgds = prepped if len(prepped) else prepShapefiles(True)
     t0 = time.time()
     one = gpd.read_file(cgdPath("cgd_union_1999to2005.js"), encoding = "UTF-8")
-    print(f"Got 1999-2005 in {time.time() - t0}")
+    print(f"Got 1999-2005 in {time.time() - t0} seconds")
     two = gpd.read_file(cgdPath("cgd_union_2007to2013.js"), encoding = "UTF-8")
-    print(f"Got 2007-2013 in {time.time() - t0}")
+    print(f"Got 2007-2013 in {time.time() - t0} seconds")
     three = gpd.read_file(cgdPath("cgd_union_2015to2019.js"), encoding = "UTF-8")
-    print(f"Got 2015-2019 in {time.time() - t0}")
+    print(f"Got 2015-2019 in {time.time() - t0} seconds")
     cgds = {"1":one, "2":two, "3":three}
     
     # Perform the unions
     lyrs = list(cgds.values())
     while len(lyrs) > 1:
         try:
-            print(f"Trying Union {len(cgds) - len(lyrs) + 1}/{len(cgds) - 1} ({time.time() - t0})")
+            print(f"Trying Union {len(cgds) - len(lyrs) + 1}/{len(cgds) - 1} ({time.time() - t0} seconds)")
             overlaid = gpd.overlay(lyrs[-1], lyrs[-2], how = "union")
         except:
             try:
-                print(f"    Buffering... ({time.time() - t0})")
+                print(f"    Buffering... ({time.time() - t0} seconds)")
                 lyrs[-1]["geometry"] = lyrs[-1].geometry.buffer(0.00001)
                 print(f"    Buffer created ({time.time() - t0})")
                 overlaid = gpd.overlay(lyrs[-1], lyrs[-2], how = "union")
             except:
-                print(f"    Buffering... ({time.time() - t0})")
+                print(f"    Buffering... ({time.time() - t0} seconds)")
                 lyrs[-2]["geometry"] = lyrs[-2].geometry.buffer(0.00001)
-                print(f"    Buffer created ({time.time() - t0})")
+                print(f"    Buffer created ({time.time() - t0} seconds)")
                 overlaid = gpd.overlay(lyrs[-1], lyrs[-2], how = "union")
         lyrs.insert(0, overlaid)
         lyrs.pop()
@@ -151,7 +148,7 @@ def fullUnion(prepped = {}):
         
     # Output
     lyrs[0].to_json(cgdPath("CGD_UNION.js"), driver = "GeoJSON", encoding = "UTF-8")
-    print("Union complete: ({time.time() - t0})\n")
+    print("Union complete: {time.time() - t0} seconds\n")
     return lyrs[0]
 
 fullUnion()
