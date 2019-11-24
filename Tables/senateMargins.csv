@@ -1,0 +1,675 @@
+year,state,writein,winner,party,winVotes,totalVotes,runnerUp,ruParty,ruVotes,rawMargin,decMargin
+2002,Alabama,False,Jeff Sessions,republican,792561,1353023,Susan Parker,democrat,538878,253683,0.18749348680695
+2002,Alabama,False,Jeff Sessions,republican,792561,1353023,Susan Parker,democrat,538878,253683,0.18749348680695
+2004,Alabama,False,Richard C. Shelby,republican,1242200,1839066,Wayne Sowell,democrat,595018,647182,0.3519079793764878
+2004,Alabama,False,Richard C. Shelby,republican,1242200,1839066,Wayne Sowell,democrat,595018,647182,0.3519079793764878
+2008,Alabama,False,Jeff Sessions,republican,1305383,2060191,Vivian Davis Figures,democrat,752391,552992,0.2684178311622563
+2008,Alabama,False,Jeff Sessions,republican,1305383,2060191,Vivian Davis Figures,democrat,752391,552992,0.2684178311622563
+2010,Alabama,False,Richard C. Shelby,republican,968181,1485499,William G. Barnes,democrat,515619,452562,0.30465318387962564
+2010,Alabama,False,Richard C. Shelby,republican,968181,1485499,William G. Barnes,democrat,515619,452562,0.30465318387962564
+2014,Alabama,False,Jeff Sessions,republican,795606,818090,,,22484,773122,0.9450329425857791
+2014,Alabama,False,Jeff Sessions,republican,795606,818090,,,22484,773122,0.9450329425857791
+2016,Alabama,False,Richard C. Shelby,republican,1335104,2087444,Ron Crumpton,democrat,748709,586395,0.2809153203630852
+2016,Alabama,False,Richard C. Shelby,republican,1335104,2087444,Ron Crumpton,democrat,748709,586395,0.2809153203630852
+2002,Alaska,False,Ted Stevens,republican,179438,229548,Frank Vondersaar,democrat,24133,155305,0.6765687350793734
+2002,Alaska,False,Ted Stevens,republican,179438,229548,Frank Vondersaar,democrat,24133,155305,0.6765687350793734
+2004,Alaska,False,Lisa Murkowski,republican,149773,308315,Tony Knowles,democrat,140424,9349,0.030322884063376743
+2004,Alaska,False,Lisa Murkowski,republican,149773,308315,Tony Knowles,democrat,140424,9349,0.030322884063376743
+2008,Alaska,False,Mark Begich,democrat,151767,317723,Ted Stevens,republican,147814,3953,0.012441655152444109
+2008,Alaska,False,Mark Begich,democrat,151767,317723,Ted Stevens,republican,147814,3953,0.012441655152444109
+2010,Alaska,True,Lisa Murkowski,,101091,255503,Joe Miller,republican,90839,10252,0.04012477348602561
+2010,Alaska,True,Lisa Murkowski,,101091,255503,Joe Miller,republican,90839,10252,0.04012477348602561
+2014,Alaska,False,Dan Sullivan,republican,135445,282400,Mark Begich,democrat,129431,6014,0.021296033994334274
+2014,Alaska,False,Dan Sullivan,republican,135445,282400,Mark Begich,democrat,129431,6014,0.021296033994334274
+2016,Alaska,False,Lisa Murkowski,republican,138149,311441,Joe Miller,libertarian,90825,47324,0.15195173403630224
+2016,Alaska,False,Lisa Murkowski,republican,138149,311441,Joe Miller,libertarian,90825,47324,0.15195173403630224
+2000,Arizona,False,Jon Kyl,republican,1108196,1397076,William Toel,independent,109230,998966,0.7150405561329519
+2000,Arizona,False,Jon Kyl,republican,1108196,1397076,William Toel,independent,109230,998966,0.7150405561329519
+2004,Arizona,False,John McCain,republican,1505372,1961677,Stuart Starky,democrat,404507,1100865,0.5611856590050248
+2004,Arizona,False,John McCain,republican,1505372,1961677,Stuart Starky,democrat,404507,1100865,0.5611856590050248
+2006,Arizona,False,Jon Kyl,republican,814398,1526782,Jim Pederson,democrat,664141,150257,0.0984141809374226
+2006,Arizona,False,Jon Kyl,republican,814398,1526782,Jim Pederson,democrat,664141,150257,0.0984141809374226
+2010,Arizona,False,John McCain,republican,1005615,1708484,Rodney Glassman,democrat,592011,413604,0.2420883075287799
+2010,Arizona,False,John McCain,republican,1005615,1708484,Rodney Glassman,democrat,592011,413604,0.2420883075287799
+2012,Arizona,False,Jeff Flake,republican,1104457,2243422,Richard Carmona,democrat,1036542,67915,0.030272949092948143
+2012,Arizona,False,Jeff Flake,republican,1104457,2243422,Richard Carmona,democrat,1036542,67915,0.030272949092948143
+2016,Arizona,False,John McCain,republican,1359267,2530730,Ann Kirkpatrick,democrat,1031245,328022,0.12961556546925201
+2016,Arizona,False,John McCain,republican,1359267,2530730,Ann Kirkpatrick,democrat,1031245,328022,0.12961556546925201
+2018,Arizona,False,Kyrsten Sinema,democrat,1191100,2384308,Martha McSally,republican,1135200,55900,0.023444957614536355
+2018,Arizona,False,Kyrsten Sinema,democrat,1191100,2384308,Martha McSally,republican,1135200,55900,0.023444957614536355
+2002,Arkansas,False,Mark Pryor,democrat,433386,804121,Tim Hutchinson,republican,370735,62651,0.07791240373028435
+2002,Arkansas,False,Mark Pryor,democrat,433386,804121,Tim Hutchinson,republican,370735,62651,0.07791240373028435
+2004,Arkansas,False,Blanche L. Lincoln,democrat,580973,1039349,Jim Holt,republican,458036,122937,0.11828269426342836
+2004,Arkansas,False,Blanche L. Lincoln,democrat,580973,1039349,Jim Holt,republican,458036,122937,0.11828269426342836
+2008,Arkansas,False,Mark L. Pryor,democrat,804678,1011754,Rebekah Kennedy,green,207076,597602,0.5906593895354009
+2008,Arkansas,False,Mark L. Pryor,democrat,804678,1011754,Rebekah Kennedy,green,207076,597602,0.5906593895354009
+2010,Arkansas,False,John Boozman,republican,451618,779957,Blanche L. Lincoln,democrat,288156,163462,0.20957822033778783
+2010,Arkansas,False,John Boozman,republican,451618,779957,Blanche L. Lincoln,democrat,288156,163462,0.20957822033778783
+2014,Arkansas,False,Tom Cotton,republican,478819,847505,Mark L. Pryor,democrat,334174,144645,0.17067155945982615
+2014,Arkansas,False,Tom Cotton,republican,478819,847505,Mark L. Pryor,democrat,334174,144645,0.17067155945982615
+2016,Arkansas,False,John Boozman,republican,661984,1107522,Conner Eldridge,democrat,400602,261382,0.23600614705622103
+2016,Arkansas,False,John Boozman,republican,661984,1107522,Conner Eldridge,democrat,400602,261382,0.23600614705622103
+2000,California,False,Dianne Feinstein,democrat,5932522,10623608,Tom Campbell,republican,3886853,2045669,0.19255878040680713
+2000,California,False,Dianne Feinstein,democrat,5932522,10623608,Tom Campbell,republican,3886853,2045669,0.19255878040680713
+2004,California,False,Barbara Boxer,democrat,6955728,12053295,Bill Jones,republican,4555922,2399806,0.19909958231338398
+2004,California,False,Barbara Boxer,democrat,6955728,12053295,Bill Jones,republican,4555922,2399806,0.19909958231338398
+2006,California,False,Dianne Feinstein,democrat,5076289,8541476,"Richard ""Dick"" Mountjoy",republican,2990822,2085467,0.24415768422225853
+2006,California,False,Dianne Feinstein,democrat,5076289,8541476,"Richard ""Dick"" Mountjoy",republican,2990822,2085467,0.24415768422225853
+2010,California,False,Barbara Boxer,democrat,5218441,10000160,Carly Fiorina,republican,4217366,1001075,0.1001058983056271
+2010,California,False,Barbara Boxer,democrat,5218441,10000160,Carly Fiorina,republican,4217366,1001075,0.1001058983056271
+2012,California,False,Dianne Feinstein,democrat,7864624,12578511,Elizabeth Emken,republican,4713887,3150737,0.25048568944289196
+2012,California,False,Dianne Feinstein,democrat,7864624,12578511,Elizabeth Emken,republican,4713887,3150737,0.25048568944289196
+2016,California,False,Kamala D. Harris,democrat,7542753,12244170,Loretta Sanchez,democrat,4701417,2841336,0.232056235743215
+2016,California,False,Kamala D. Harris,democrat,7542753,12244170,Loretta Sanchez,democrat,4701417,2841336,0.232056235743215
+2018,California,False,Dianne Feinstein,democrat,6019422,11113364,Kevin De Leon,democrat,5093942,925480,0.08327631489439202
+2018,California,False,Dianne Feinstein,democrat,6019422,11113364,Kevin De Leon,democrat,5093942,925480,0.08327631489439202
+2002,Colorado,False,Wayne Allard,republican,717893,1416082,Tom Strickland,democrat,648130,69763,0.049264802462004265
+2002,Colorado,False,Wayne Allard,republican,717893,1416082,Tom Strickland,democrat,648130,69763,0.049264802462004265
+2004,Colorado,False,Ken Salazar,democrat,1081188,2107472,Pete Coors,republican,980668,100520,0.04769695635339399
+2004,Colorado,False,Ken Salazar,democrat,1081188,2107472,Pete Coors,republican,980668,100520,0.04769695635339399
+2008,Colorado,False,Mark Udall,democrat,1230994,2331621,Bob Schaffer,republican,990755,240239,0.10303518453470778
+2008,Colorado,False,Mark Udall,democrat,1230994,2331621,Bob Schaffer,republican,990755,240239,0.10303518453470778
+2010,Colorado,False,Michael F. Bennet,democrat,851590,1772286,Ken Buck,republican,822731,28859,0.016283489233679005
+2010,Colorado,False,Michael F. Bennet,democrat,851590,1772286,Ken Buck,republican,822731,28859,0.016283489233679005
+2014,Colorado,False,Cory Gardner,republican,983891,2041058,Mark Udall,democrat,944203,39688,0.019444817344730025
+2014,Colorado,False,Cory Gardner,republican,983891,2041058,Mark Udall,democrat,944203,39688,0.019444817344730025
+2016,Colorado,False,Michael F. Bennet,democrat,1370710,2743023,Darryl Glenn,republican,1215318,155392,0.05664990778422202
+2016,Colorado,False,Michael F. Bennet,democrat,1370710,2743023,Darryl Glenn,republican,1215318,155392,0.05664990778422202
+2000,Connecticut,False,Joseph I. Lieberman,democrat,828902,1311261,Phil Giordano,republican,448077,380825,0.29042654360954834
+2000,Connecticut,False,Joseph I. Lieberman,democrat,828902,1311261,Phil Giordano,republican,448077,380825,0.29042654360954834
+2004,Connecticut,False,Christopher J. Dodd,democrat,945347,1424726,Jack C. Orchulli,republican,457749,487598,0.3422398412045544
+2004,Connecticut,False,Christopher J. Dodd,democrat,945347,1424726,Jack C. Orchulli,republican,457749,487598,0.3422398412045544
+2006,Connecticut,False,Joseph I. Lieberman,connecticut for lieberman,564095,1134777,Ned Lamont,democrat,450844,113251,0.09980022506624647
+2006,Connecticut,False,Joseph I. Lieberman,connecticut for lieberman,564095,1134777,Ned Lamont,democrat,450844,113251,0.09980022506624647
+2010,Connecticut,False,Richard Blumenthal,democrat,605204,1153115,Linda E. McMahon,republican,498341,106863,0.09267332399630568
+2010,Connecticut,False,Richard Blumenthal,democrat,605204,1153115,Linda E. McMahon,republican,498341,106863,0.09267332399630568
+2012,Connecticut,False,Christopher S. Murphy,democrat,792983,1511764,Linda E. McMahon,republican,604569,188414,0.12463188698765154
+2012,Connecticut,False,Christopher S. Murphy,democrat,792983,1511764,Linda E. McMahon,republican,604569,188414,0.12463188698765154
+2016,Connecticut,False,Richard Blumenthal,democrat,920766,1596276,Dan Carter,republican,552621,368145,0.23062741029746736
+2016,Connecticut,False,Richard Blumenthal,democrat,920766,1596276,Dan Carter,republican,552621,368145,0.23062741029746736
+2018,Connecticut,False,Christopher S Murphy,democrat,787685,1386840,Matthew Corey,republican,545717,241968,0.1744743445530847
+2018,Connecticut,False,Christopher S Murphy,democrat,787685,1386840,Matthew Corey,republican,545717,241968,0.1744743445530847
+2000,Delaware,False,Thomas R. Carper,democrat,181566,326993,"William V. Roth, Jr.",republican,142891,38675,0.11827470312820154
+2000,Delaware,False,Thomas R. Carper,democrat,181566,326993,"William V. Roth, Jr.",republican,142891,38675,0.11827470312820154
+2002,Delaware,False,Joseph R. Biden Jr.,democrat,135253,232314,Raymond J. Clatworthy,republican,94793,40460,0.17416083404357902
+2002,Delaware,False,Joseph R. Biden Jr.,democrat,135253,232314,Raymond J. Clatworthy,republican,94793,40460,0.17416083404357902
+2006,Delaware,False,Thomas R. Carper,democrat,170567,242972,Jan Ting,republican,69734,100833,0.4149984360337816
+2006,Delaware,False,Thomas R. Carper,democrat,170567,242972,Jan Ting,republican,69734,100833,0.4149984360337816
+2008,Delaware,False,Joseph R. Biden Jr.,democrat,257539,398134,Christine O'Donnell,republican,140595,116944,0.29373025162382516
+2008,Delaware,False,Joseph R. Biden Jr.,democrat,257539,398134,Christine O'Donnell,republican,140595,116944,0.29373025162382516
+2010,Delaware,False,Christopher A. Coons,democrat,174012,307402,Christine O'Donnell,republican,123053,50959,0.16577315697360462
+2010,Delaware,False,Christopher A. Coons,democrat,174012,307402,Christine O'Donnell,republican,123053,50959,0.16577315697360462
+2012,Delaware,False,Thomas R. Carper,democrat,265415,399606,Kevin Wade,republican,115700,149715,0.3746565366886383
+2012,Delaware,False,Thomas R. Carper,democrat,265415,399606,Kevin Wade,republican,115700,149715,0.3746565366886383
+2014,Delaware,False,Christopher A. Coons,democrat,130655,234038,Kevin Wade,republican,98823,31832,0.13601210059904806
+2014,Delaware,False,Christopher A. Coons,democrat,130655,234038,Kevin Wade,republican,98823,31832,0.13601210059904806
+2018,Delaware,False,Thomas R Carper,democrat,217385,362592,Robert B Arlett,republican,137127,80258,0.22134520342423442
+2018,Delaware,False,Thomas R Carper,democrat,217385,362592,Robert B Arlett,republican,137127,80258,0.22134520342423442
+2000,Florida,False,Bill Nelson,democrat,2989487,5856731,Bill McCollum,republican,2705348,284139,0.048514948014515225
+2000,Florida,False,Bill Nelson,democrat,2989487,5856731,Bill McCollum,republican,2705348,284139,0.048514948014515225
+2004,Florida,False,Mel Martinez,republican,3672864,7429894,Betty Castor,democrat,3590201,82663,0.011125730730478789
+2004,Florida,False,Mel Martinez,republican,3672864,7429894,Betty Castor,democrat,3590201,82663,0.011125730730478789
+2006,Florida,False,Bill Nelson,democrat,2890548,4793534,Katherine Harris,republican,1826127,1064421,0.22205349956837683
+2006,Florida,False,Bill Nelson,democrat,2890548,4793534,Katherine Harris,republican,1826127,1064421,0.22205349956837683
+2010,Florida,False,Marco Rubio,republican,2645743,5411106,Charlie Crist,no party affiliation,1607549,1038194,0.19186354878281814
+2010,Florida,False,Marco Rubio,republican,2645743,5411106,Charlie Crist,no party affiliation,1607549,1038194,0.19186354878281814
+2012,Florida,False,Bill Nelson,democrat,4523451,8189946,Connie Mack,republican,3458267,1065184,0.13005995399725467
+2012,Florida,False,Bill Nelson,democrat,4523451,8189946,Connie Mack,republican,3458267,1065184,0.13005995399725467
+2016,Florida,False,Marco Rubio,republican,4835191,9301820,Patrick Murphy,democrat,4122088,713103,0.07666273911987115
+2016,Florida,False,Marco Rubio,republican,4835191,9301820,Patrick Murphy,democrat,4122088,713103,0.07666273911987115
+2018,Florida,False,Rick Scott,republican,4099505,8190005,Bill Nelson,democrat,4089472,10033,0.001225029777149056
+2018,Florida,False,Rick Scott,republican,4099505,8190005,Bill Nelson,democrat,4089472,10033,0.001225029777149056
+2000,Georgia,False,Zell Miller,democrat (not identified on ballot),1413224,2415743,Mack F. Mattingly,republican (not identified on ballot),920478,492746,0.20397285638414347
+2000,Georgia,False,Zell Miller,democrat (not identified on ballot),1413224,2415743,Mack F. Mattingly,republican (not identified on ballot),920478,492746,0.20397285638414347
+2002,Georgia,False,Saxby Chambliss,republican,1071352,2031604,Max Cleland,democrat,932422,138930,0.06838438987125439
+2002,Georgia,False,Saxby Chambliss,republican,1071352,2031604,Max Cleland,democrat,932422,138930,0.06838438987125439
+2004,Georgia,False,Johnny Isakson,republican,1864202,3220981,Denise L. Majette,democrat,1287690,576512,0.1789864640617253
+2004,Georgia,False,Johnny Isakson,republican,1864202,3220981,Denise L. Majette,democrat,1287690,576512,0.1789864640617253
+2008,Georgia,False,Saxby Chambliss,republican,1867097,3752485,Jim Martin,democrat,1757393,109704,0.029235026922159568
+2008,Georgia,False,Saxby Chambliss,republican,1867097,3752485,Jim Martin,democrat,1757393,109704,0.029235026922159568
+2010,Georgia,False,Johnny Isakson,republican,1489904,2555258,"Michael ""Mike"" Thurmond",democrat,996516,493388,0.19308735164903118
+2010,Georgia,False,Johnny Isakson,republican,1489904,2555258,"Michael ""Mike"" Thurmond",democrat,996516,493388,0.19308735164903118
+2014,Georgia,False,David A. Perdue,republican,1358088,2567805,M. Michelle Nunn,democrat,1160811,197277,0.07682709551543054
+2014,Georgia,False,David A. Perdue,republican,1358088,2567805,M. Michelle Nunn,democrat,1160811,197277,0.07682709551543054
+2016,Georgia,False,Johnny Isakson,republican,2135806,3898605,Jim Barksdale,democrat,1599726,536080,0.13750559494998849
+2016,Georgia,False,Johnny Isakson,republican,2135806,3898605,Jim Barksdale,democrat,1599726,536080,0.13750559494998849
+2000,Hawaii,False,Daniel K. Akaka,democrat,251215,345623,John Carroll,republican,84701,166514,0.48177927973543433
+2000,Hawaii,False,Daniel K. Akaka,democrat,251215,345623,John Carroll,republican,84701,166514,0.48177927973543433
+2004,Hawaii,False,Daniel K. Inouye,democrat,313629,415347,Cam Cavasso,republican,87172,226457,0.5452236322881832
+2004,Hawaii,False,Daniel K. Inouye,democrat,313629,415347,Cam Cavasso,republican,87172,226457,0.5452236322881832
+2006,Hawaii,False,Daniel K. Akaka,democrat,210330,342842,Cynthia Thielen,republican,126097,84233,0.2456904346608642
+2006,Hawaii,False,Daniel K. Akaka,democrat,210330,342842,Cynthia Thielen,republican,126097,84233,0.2456904346608642
+2010,Hawaii,False,Daniel K. Inouye,democrat,277228,370583,Cam Cavasso,republican,79939,197289,0.5323746637055666
+2010,Hawaii,False,Daniel K. Inouye,democrat,277228,370583,Cam Cavasso,republican,79939,197289,0.5323746637055666
+2012,Hawaii,False,Mazie K. Hirono,democrat,269489,437159,Linda Lingle,republican,160994,108495,0.2481820115793109
+2012,Hawaii,False,Mazie K. Hirono,democrat,269489,437159,Linda Lingle,republican,160994,108495,0.2481820115793109
+2014,Hawaii,False,Brian Schatz,democrat,246827,369703,Cam Cavasso,republican,98006,148821,0.4025420405027819
+2014,Hawaii,False,Brian Schatz,democrat,246827,369703,Cam Cavasso,republican,98006,148821,0.4025420405027819
+2016,Hawaii,False,Brian Schatz,democrat,306604,437664,John Carroll,republican,92653,213951,0.48884760912480807
+2016,Hawaii,False,Brian Schatz,democrat,306604,437664,John Carroll,republican,92653,213951,0.48884760912480807
+2018,Hawaii,False,Mazie K. Hirono,democrat,276316,388351,Ron Curtis,republican,112035,164281,0.42302195694101474
+2018,Hawaii,False,Mazie K. Hirono,democrat,276316,388351,Ron Curtis,republican,112035,164281,0.42302195694101474
+2002,Idaho,False,Larry E. Craig,republican,266215,408544,Alan Blinken,democrat,132975,133240,0.3261337824077701
+2002,Idaho,False,Larry E. Craig,republican,266215,408544,Alan Blinken,democrat,132975,133240,0.3261337824077701
+2004,Idaho,False,Mike Crapo,republican,499796,503932,,,4136,495660,0.9835850868768008
+2004,Idaho,False,Mike Crapo,republican,499796,503932,,,4136,495660,0.9835850868768008
+2008,Idaho,False,Jim Risch,republican,371744,644780,Larry LaRocco,democrat,219903,151841,0.2354927262011849
+2008,Idaho,False,Jim Risch,republican,371744,644780,Larry LaRocco,democrat,219903,151841,0.2354927262011849
+2010,Idaho,False,Mike Crapo,republican,319953,449530,P. Tom Sullivan,democrat,112057,207896,0.46247413965697515
+2010,Idaho,False,Mike Crapo,republican,319953,449530,P. Tom Sullivan,democrat,112057,207896,0.46247413965697515
+2014,Idaho,False,James E. Risch,republican,285596,437170,Nels Mitchell,democrat,151574,134022,0.3065672392890637
+2014,Idaho,False,James E. Risch,republican,285596,437170,Nels Mitchell,democrat,151574,134022,0.3065672392890637
+2016,Idaho,False,Mike Crapo,republican,449017,678943,Jerry Sturgill,democrat,188249,260768,0.38407937043315854
+2016,Idaho,False,Mike Crapo,republican,449017,678943,Jerry Sturgill,democrat,188249,260768,0.38407937043315854
+2002,Illinois,False,Richard J. Durbin,democrat,2103766,3486851,Jim Durkin,republican,1325703,778063,0.22314202700373487
+2002,Illinois,False,Richard J. Durbin,democrat,2103766,3486851,Jim Durkin,republican,1325703,778063,0.22314202700373487
+2004,Illinois,False,Barack Obama,democrat,3597456,5141520,Alan Keyes,republican,1390690,2206766,0.42920498218425684
+2004,Illinois,False,Barack Obama,democrat,3597456,5141520,Alan Keyes,republican,1390690,2206766,0.42920498218425684
+2008,Illinois,False,Richard J. Durbin,democrat,3615844,5329884,Steve Sauerberg,republican,1520621,2095223,0.3931085554582426
+2008,Illinois,False,Richard J. Durbin,democrat,3615844,5329884,Steve Sauerberg,republican,1520621,2095223,0.3931085554582426
+2010,Illinois,False,Mark Steven Kirk,republican,1778698,3704473,"Alexander ""Alexi"" Giannoulias",democrat,1719478,59220,0.015986079531420505
+2010,Illinois,False,Mark Steven Kirk,republican,1778698,3704473,"Alexander ""Alexi"" Giannoulias",democrat,1719478,59220,0.015986079531420505
+2014,Illinois,False,Richard J. Durbin,democrat,1929637,3603519,"James D. ""Jim"" Oberweis",republican,1538522,391115,0.10853696067649427
+2014,Illinois,False,Richard J. Durbin,democrat,1929637,3603519,"James D. ""Jim"" Oberweis",republican,1538522,391115,0.10853696067649427
+2016,Illinois,False,Tammy Duckworth,democrat,3012940,5491878,Mark Kirk,republican,2184692,828248,0.15081325550203412
+2016,Illinois,False,Tammy Duckworth,democrat,3012940,5491878,Mark Kirk,republican,2184692,828248,0.15081325550203412
+2000,Indiana,False,Richard G. Lugar,republican,1427944,2145209,David L. Johnson,democrat,683273,744671,0.34713214423396516
+2000,Indiana,False,Richard G. Lugar,republican,1427944,2145209,David L. Johnson,democrat,683273,744671,0.34713214423396516
+2004,Indiana,False,Evan Bayh,democrat,1496976,2428233,Marvin Scott,republican,903913,593063,0.24423644683191442
+2004,Indiana,False,Evan Bayh,democrat,1496976,2428233,Marvin Scott,republican,903913,593063,0.24423644683191442
+2006,Indiana,False,Richard G. Lugar,republican,1171553,1341111,Steve Osborn,libertarian,168820,1002733,0.7476882972401241
+2006,Indiana,False,Richard G. Lugar,republican,1171553,1341111,Steve Osborn,libertarian,168820,1002733,0.7476882972401241
+2010,Indiana,False,Dan Coats,republican,952116,1744481,Brad Ellsworth,democrat,697775,254341,0.14579751800105595
+2010,Indiana,False,Dan Coats,republican,952116,1744481,Brad Ellsworth,democrat,697775,254341,0.14579751800105595
+2012,Indiana,False,Joe Donnelly,democrat,1281181,2560102,Richard E. Mourdock,republican,1133621,147560,0.05763832847284994
+2012,Indiana,False,Joe Donnelly,democrat,1281181,2560102,Richard E. Mourdock,republican,1133621,147560,0.05763832847284994
+2016,Indiana,False,Todd C. Young,republican,1423991,2732546,Evan Bayh,democrat,1158947,265044,0.09699525643850093
+2016,Indiana,False,Todd C. Young,republican,1423991,2732546,Evan Bayh,democrat,1158947,265044,0.09699525643850093
+2018,Indiana,False,Mike Braun,republican,1158000,2282565,Joe Donnelly,democrat,1023553,134447,0.05890171802336408
+2018,Indiana,False,Mike Braun,republican,1158000,2282565,Joe Donnelly,democrat,1023553,134447,0.05890171802336408
+2002,Iowa,False,Tom Harkin,democrat,554278,1023075,Greg Ganske,republican,447892,106386,0.10398651125284064
+2002,Iowa,False,Tom Harkin,democrat,554278,1023075,Greg Ganske,republican,447892,106386,0.10398651125284064
+2004,Iowa,False,Charles E. Grassley,republican,1038175,1479228,Arthur Small,democrat,412365,625810,0.4230652745891776
+2004,Iowa,False,Charles E. Grassley,republican,1038175,1479228,Arthur Small,democrat,412365,625810,0.4230652745891776
+2008,Iowa,False,Tom Harkin,democrat,941665,1502918,Christopher Reed,republican,560006,381659,0.25394532502771283
+2008,Iowa,False,Tom Harkin,democrat,941665,1502918,Christopher Reed,republican,560006,381659,0.25394532502771283
+2010,Iowa,False,Chuck Grassley,republican,718215,1116063,Roxanne Conlin,democrat,371686,346529,0.31049232883806743
+2010,Iowa,False,Chuck Grassley,republican,718215,1116063,Roxanne Conlin,democrat,371686,346529,0.31049232883806743
+2014,Iowa,False,Joni Ernst,republican,588575,1129700,Bruce Braley,democrat,494370,94205,0.0833893954147118
+2014,Iowa,False,Joni Ernst,republican,588575,1129700,Bruce Braley,democrat,494370,94205,0.0833893954147118
+2016,Iowa,False,Chuck Grassley,republican,926007,1541036,Patty Judge,democrat,549460,376547,0.2443466602986562
+2016,Iowa,False,Chuck Grassley,republican,926007,1541036,Patty Judge,democrat,549460,376547,0.2443466602986562
+2002,Kansas,False,Pat Roberts,republican,641075,776850,Steven A. Rosile,libertarian,70725,570350,0.7341829181952758
+2002,Kansas,False,Pat Roberts,republican,641075,776850,Steven A. Rosile,libertarian,70725,570350,0.7341829181952758
+2004,Kansas,False,Sam Brownback,republican,780863,1129022,Lee Jones,democrat,310337,470526,0.4167553865203689
+2004,Kansas,False,Sam Brownback,republican,780863,1129022,Lee Jones,democrat,310337,470526,0.4167553865203689
+2008,Kansas,False,Pat Roberts,republican,727121,1210690,Jim Slattery,democrat,441399,285722,0.23599930618077297
+2008,Kansas,False,Pat Roberts,republican,727121,1210690,Jim Slattery,democrat,441399,285722,0.23599930618077297
+2010,Kansas,False,Jerry Moran,republican,587175,837692,Lisa Johnston,democrat,220971,366204,0.4371582872941367
+2010,Kansas,False,Jerry Moran,republican,587175,837692,Lisa Johnston,democrat,220971,366204,0.4371582872941367
+2014,Kansas,False,Pat Roberts,republican,460350,866191,Greg Orman,independent,368372,91978,0.10618674172324583
+2014,Kansas,False,Pat Roberts,republican,460350,866191,Greg Orman,independent,368372,91978,0.10618674172324583
+2016,Kansas,False,Jerry Moran,republican,732376,1177922,Patrick Wiesner,democrat,379740,352636,0.2993712656695435
+2016,Kansas,False,Jerry Moran,republican,732376,1177922,Patrick Wiesner,democrat,379740,352636,0.2993712656695435
+2002,Kentucky,False,Mitch McConnell,republican,731679,1131313,Lois Combs Weinberg,democrat,399634,332045,0.2935040965674398
+2002,Kentucky,False,Mitch McConnell,republican,731679,1131313,Lois Combs Weinberg,democrat,399634,332045,0.2935040965674398
+2004,Kentucky,False,Jim Bunning,republican,873507,1724362,Daniel Mongiardo,democrat,850855,22652,0.01313645278659581
+2004,Kentucky,False,Jim Bunning,republican,873507,1724362,Daniel Mongiardo,democrat,850855,22652,0.01313645278659581
+2008,Kentucky,False,Mitch McConnell,republican,953816,1800821,Bruce Lunsford,democrat,847005,106811,0.059312391403698594
+2008,Kentucky,False,Mitch McConnell,republican,953816,1800821,Bruce Lunsford,democrat,847005,106811,0.059312391403698594
+2010,Kentucky,False,Rand Paul,republican,755706,1356096,Jack Conway,democrat,600052,155654,0.1147809594600972
+2010,Kentucky,False,Rand Paul,republican,755706,1356096,Jack Conway,democrat,600052,155654,0.1147809594600972
+2014,Kentucky,False,Mich McConnell,republican,806787,1435868,Alison Lundergan Grimes,democrat,584698,222089,0.15467229578206348
+2014,Kentucky,False,Mich McConnell,republican,806787,1435868,Alison Lundergan Grimes,democrat,584698,222089,0.15467229578206348
+2016,Kentucky,False,Rand Paul,republican,1090177,1903465,Jim Gray,democrat,813246,276931,0.14548783402899457
+2016,Kentucky,False,Rand Paul,republican,1090177,1903465,Jim Gray,democrat,813246,276931,0.14548783402899457
+2002,Louisiana,False,Mary L. Landrieu,democrat,638654,2481629,Suzanne Haik Terrell,republican,596642,42012,0.016929202552033368
+2002,Louisiana,False,Mary L. Landrieu,democrat,638654,2481629,Suzanne Haik Terrell,republican,596642,42012,0.016929202552033368
+2004,Louisiana,False,David Vitter,republican,943014,1848056,Christopher John,democrat,542150,400864,0.21691117585181408
+2004,Louisiana,False,David Vitter,republican,943014,1848056,Christopher John,democrat,542150,400864,0.21691117585181408
+2008,Louisiana,False,Mary L. Landrieu,democrat,988298,1896574,John Kennedy,republican,867177,121121,0.0638630498994503
+2008,Louisiana,False,Mary L. Landrieu,democrat,988298,1896574,John Kennedy,republican,867177,121121,0.0638630498994503
+2010,Louisiana,False,David Vitter,republican,715415,1264994,"""Charlie"" Melancon",democrat,476572,238843,0.18880959119173685
+2010,Louisiana,False,David Vitter,republican,715415,1264994,"""Charlie"" Melancon",democrat,476572,238843,0.18880959119173685
+2014,Louisiana,False,Bill Cassidy,republican,1712379,3523183,Mary L. Landrieu,democrat,1561210,151169,0.0429069395486979
+2014,Louisiana,False,Bill Cassidy,republican,1712379,3523183,Mary L. Landrieu,democrat,1561210,151169,0.0429069395486979
+2016,Louisiana,False,John Kennedy,republican,536191,1997218,Foster Campbell,democrat,347816,188375,0.09431869730795533
+2016,Louisiana,False,John Kennedy,republican,536191,1997218,Foster Campbell,democrat,347816,188375,0.09431869730795533
+2000,Maine,False,Olympia J. Snowe,republican,437689,634872,Mark W. Lawrence,democrat,197183,240506,0.37882596806915414
+2000,Maine,False,Olympia J. Snowe,republican,437689,634872,Mark W. Lawrence,democrat,197183,240506,0.37882596806915414
+2002,Maine,False,Susan M. Collins,republican,295041,504899,Chellie Pingree,democrat,209858,85183,0.16871295051089424
+2002,Maine,False,Susan M. Collins,republican,295041,504899,Chellie Pingree,democrat,209858,85183,0.16871295051089424
+2006,Maine,False,Olympia J. Snowe,republican,405596,545128,Jean M. Hay Bright,democrat,113131,292465,0.5365070222039594
+2006,Maine,False,Olympia J. Snowe,republican,405596,545128,Jean M. Hay Bright,democrat,113131,292465,0.5365070222039594
+2008,Maine,False,Susan M. Collins,republican,444300,724430,Thomas H. Allen,democrat,279510,164790,0.22747539444804882
+2008,Maine,False,Susan M. Collins,republican,444300,724430,Thomas H. Allen,democrat,279510,164790,0.22747539444804882
+2012,Maine,False,Angus King,independent for Maine,370580,724720,"Charles E. Summers, Jr.",republican,215399,155181,0.21412545534827238
+2012,Maine,False,Angus King,independent for Maine,370580,724720,"Charles E. Summers, Jr.",republican,215399,155181,0.21412545534827238
+2014,Maine,False,Susan M. Collins,republican,413505,616996,Shenna Bellows,democrat,190254,223251,0.3618354089815817
+2014,Maine,False,Susan M. Collins,republican,413505,616996,Shenna Bellows,democrat,190254,223251,0.3618354089815817
+2018,Maine,False,"Angus S. King, Jr.",independent,344575,634409,Eric L. Brakey,republican,223502,121073,0.19084376167425116
+2018,Maine,False,"Angus S. King, Jr.",independent,344575,634409,Eric L. Brakey,republican,223502,121073,0.19084376167425116
+2000,Maryland,False,Paul S. Sarbanes,democrat,1230013,1946898,Paul H. Rappaport,republican,715178,514835,0.26443860952140275
+2000,Maryland,False,Paul S. Sarbanes,democrat,1230013,1946898,Paul H. Rappaport,republican,715178,514835,0.26443860952140275
+2004,Maryland,False,Barbara A. Mikulski,democrat,1504691,2321931,E. J. Pipkin,republican,783055,721636,0.3107913198109677
+2004,Maryland,False,Barbara A. Mikulski,democrat,1504691,2321931,E. J. Pipkin,republican,783055,721636,0.3107913198109677
+2006,Maryland,False,Benjamin L. Cardin,democrat,965477,1781139,Michael S. Steele,republican,787182,178295,0.10010167651149066
+2006,Maryland,False,Benjamin L. Cardin,democrat,965477,1781139,Michael S. Steele,republican,787182,178295,0.10010167651149066
+2010,Maryland,False,Barbara Mikulski,democrat,1140531,1833858,Eric Wargotz,republican,655666,484865,0.26439615281008677
+2010,Maryland,False,Barbara Mikulski,democrat,1140531,1833858,Eric Wargotz,republican,655666,484865,0.26439615281008677
+2012,Maryland,False,Benjamin L. Cardin,democrat,1474028,2633234,Daniel John Bongino,republican,693291,780737,0.29649358925184777
+2012,Maryland,False,Benjamin L. Cardin,democrat,1474028,2633234,Daniel John Bongino,republican,693291,780737,0.29649358925184777
+2016,Maryland,False,Chris Van Hollen,democrat,1659907,2726170,Kathy Szeliga,republican,972557,687350,0.25213027800907495
+2016,Maryland,False,Chris Van Hollen,democrat,1659907,2726170,Kathy Szeliga,republican,972557,687350,0.25213027800907495
+2018,Maryland,False,Ben Cardin,democrat,1491614,2299889,Tony Campbell,republican,697017,794597,0.3454936303447689
+2018,Maryland,False,Ben Cardin,democrat,1491614,2299889,Tony Campbell,republican,697017,794597,0.3454936303447689
+2000,Massachusetts,False,Edward M. Kennedy,democrat,1889494,2734048,Jack E. Robinson III,republican,334341,1555153,0.5688096917098749
+2000,Massachusetts,False,Edward M. Kennedy,democrat,1889494,2734048,Jack E. Robinson III,republican,334341,1555153,0.5688096917098749
+2002,Massachusetts,False,John F. Kerry,democrat,1605976,2220301,Michael E. Cloud,libertarian,369807,1236169,0.5567573946055062
+2002,Massachusetts,False,John F. Kerry,democrat,1605976,2220301,Michael E. Cloud,libertarian,369807,1236169,0.5567573946055062
+2006,Massachusetts,False,Edward M. Kennedy,democrat,1500738,2243835,Kenneth G. Chase,republican,661532,839206,0.37400521874380244
+2006,Massachusetts,False,Edward M. Kennedy,democrat,1500738,2243835,Kenneth G. Chase,republican,661532,839206,0.37400521874380244
+2008,Massachusetts,False,John F. Kerry,democrat,1971974,3102995,Jeffrey K. Beatty,republican,926044,1045930,0.337071119998582
+2008,Massachusetts,False,John F. Kerry,democrat,1971974,3102995,Jeffrey K. Beatty,republican,926044,1045930,0.337071119998582
+2012,Massachusetts,False,Elizabeth A. Warren,democrat,1696346,3184196,Scott P. Brown,republican,1458048,238298,0.07483772983823866
+2012,Massachusetts,False,Elizabeth A. Warren,democrat,1696346,3184196,Scott P. Brown,republican,1458048,238298,0.07483772983823866
+2014,Massachusetts,False,Edward J. Markey,democrat,1289944,2186789,Brian J. Herr,republican,791950,497994,0.22772841824245504
+2014,Massachusetts,False,Edward J. Markey,democrat,1289944,2186789,Brian J. Herr,republican,791950,497994,0.22772841824245504
+2018,Massachusetts,False,Elizabeth A. Warren,democrat,1633371,2707090,Geoff Diehl,republican,979210,654161,0.24164730393152795
+2018,Massachusetts,False,Elizabeth A. Warren,democrat,1633371,2707090,Geoff Diehl,republican,979210,654161,0.24164730393152795
+2000,Michigan,False,Debbie Stabenow,democrat,2061952,4167685,Spencer Abraham,republican,1994693,67259,0.016138215820053592
+2000,Michigan,False,Debbie Stabenow,democrat,2061952,4167685,Spencer Abraham,republican,1994693,67259,0.016138215820053592
+2002,Michigan,False,Carl Levin,democrat,1896614,3129287,Andrew Raczkowski,republican,1185545,711069,0.22723035630800237
+2002,Michigan,False,Carl Levin,democrat,1896614,3129287,Andrew Raczkowski,republican,1185545,711069,0.22723035630800237
+2006,Michigan,False,Debbie Stabenow,democrat,2151278,3780142,Michael Bouchard,republican,1559597,591681,0.15652348509659159
+2006,Michigan,False,Debbie Stabenow,democrat,2151278,3780142,Michael Bouchard,republican,1559597,591681,0.15652348509659159
+2008,Michigan,False,Carl Levin,democrat,3038386,4848620,Jack Hoogendyk,republican,1641070,1397316,0.28818839174857996
+2008,Michigan,False,Carl Levin,democrat,3038386,4848620,Jack Hoogendyk,republican,1641070,1397316,0.28818839174857996
+2012,Michigan,False,Debbie Stabenow,democrat,2735826,4652918,Pete Hoekstra,republican,1767386,968440,0.20813605569666177
+2012,Michigan,False,Debbie Stabenow,democrat,2735826,4652918,Pete Hoekstra,republican,1767386,968440,0.20813605569666177
+2014,Michigan,False,Gary C. Peters,democrat,1704936,3121771,Terri Lynn Land,republican,1290199,414737,0.13285311446611553
+2014,Michigan,False,Gary C. Peters,democrat,1704936,3121771,Terri Lynn Land,republican,1290199,414737,0.13285311446611553
+2018,Michigan,False,Debbie Stabenow,democrat,2214478,4237271,John James,republican,1938818,275660,0.06505602308655734
+2018,Michigan,False,Debbie Stabenow,democrat,2214478,4237271,John James,republican,1938818,275660,0.06505602308655734
+2000,Minnesota,False,Mark Dayton,democratic-farmer-labor,1181553,2419520,Rod Grams,republican,1047474,134079,0.05541553696600976
+2000,Minnesota,False,Mark Dayton,democratic-farmer-labor,1181553,2419520,Rod Grams,republican,1047474,134079,0.05541553696600976
+2002,Minnesota,False,Norm Coleman,republican,1116697,2254639,Walter F. Mondale,democrat,1067246,49451,0.021933001247649853
+2002,Minnesota,False,Norm Coleman,republican,1116697,2254639,Walter F. Mondale,democrat,1067246,49451,0.021933001247649853
+2006,Minnesota,False,Amy Klobuchar,democratic-farmer-labor,1278849,2202772,Mark R. Kennedy,republican,835653,443196,0.2011992162602394
+2006,Minnesota,False,Amy Klobuchar,democratic-farmer-labor,1278849,2202772,Mark R. Kennedy,republican,835653,443196,0.2011992162602394
+2008,Minnesota,False,Al Franken,democrat,1212629,2887646,Norm Coleman,republican,1212317,312,0.00010804648492229729
+2008,Minnesota,False,Al Franken,democrat,1212629,2887646,Norm Coleman,republican,1212317,312,0.00010804648492229729
+2012,Minnesota,False,Amy Klobuchar,democrat,1854595,2843207,Kurt Bills,republican,867974,986621,0.34700990817763183
+2012,Minnesota,False,Amy Klobuchar,democrat,1854595,2843207,Kurt Bills,republican,867974,986621,0.34700990817763183
+2014,Minnesota,False,Al Franken,democrat,1053205,1981528,Mike McFadden,republican,850227,202978,0.10243509049581934
+2014,Minnesota,False,Al Franken,democrat,1053205,1981528,Mike McFadden,republican,850227,202978,0.10243509049581934
+2018,Minnesota,False,Amy Klobuchar,democratic-farmer-labor,1566174,5184235,Tina Smith,democratic-farmer-labor,1370540,195634,0.0377363294680893
+2018,Minnesota,False,Amy Klobuchar,democratic-farmer-labor,1566174,5184235,Tina Smith,democratic-farmer-labor,1370540,195634,0.0377363294680893
+2000,Mississippi,False,Trent Lott,republican,654941,994144,"Troy D. Brown, Sr.",democrat,314090,340851,0.34285878102166284
+2000,Mississippi,False,Trent Lott,republican,654941,994144,"Troy D. Brown, Sr.",democrat,314090,340851,0.34285878102166284
+2002,Mississippi,False,Thad Cochran,republican,533269,630495,Shawn O'Hara,reform,97226,436043,0.6915883551812465
+2002,Mississippi,False,Thad Cochran,republican,533269,630495,Shawn O'Hara,reform,97226,436043,0.6915883551812465
+2006,Mississippi,False,Trent Lott,republican,388399,610921,Erik R. Fleming,democrat,213000,175399,0.287105861477998
+2006,Mississippi,False,Trent Lott,republican,388399,610921,Erik R. Fleming,democrat,213000,175399,0.287105861477998
+2008,Mississippi,False,Thad Cochran,republican,766111,1247026,Roger F. Wicker,republican,683409,82702,0.06631938708575436
+2008,Mississippi,False,Thad Cochran,republican,766111,1247026,Roger F. Wicker,republican,683409,82702,0.06631938708575436
+2012,Mississippi,False,Roger F. Wicker,republican,709626,1241568,"Albert N. Gore, Jr.",democrat,503467,206159,0.16604728858991208
+2012,Mississippi,False,Roger F. Wicker,republican,709626,1241568,"Albert N. Gore, Jr.",democrat,503467,206159,0.16604728858991208
+2014,Mississippi,False,Thad Cochran,republican,378481,631858,Travis W. Childers,democrat,239439,139042,0.2200526067565814
+2014,Mississippi,False,Thad Cochran,republican,378481,631858,Travis W. Childers,democrat,239439,139042,0.2200526067565814
+2018,Mississippi,False,Roger F. Wicker,republican,547619,1843803,Cindy Hyde-Smith,republican,486769,60850,0.03300244115016626
+2018,Mississippi,False,Roger F. Wicker,republican,547619,1843803,Cindy Hyde-Smith,republican,486769,60850,0.03300244115016626
+2000,Missouri,False,Mel Carnahan,democrat,1191812,2361586,John Ashcroft,republican,1142852,48960,0.020731830219183234
+2000,Missouri,False,Mel Carnahan,democrat,1191812,2361586,John Ashcroft,republican,1142852,48960,0.020731830219183234
+2002,Missouri,False,Jim Talent,republican,935032,1877620,Jean Carnahan,democrat,913778,21254,0.011319649343317584
+2002,Missouri,False,Jim Talent,republican,935032,1877620,Jean Carnahan,democrat,913778,21254,0.011319649343317584
+2004,Missouri,False,Christopher S. Bond,republican,1518089,2706402,Nancy Farmer,democrat,1158261,359828,0.13295438002188886
+2004,Missouri,False,Christopher S. Bond,republican,1518089,2706402,Nancy Farmer,democrat,1158261,359828,0.13295438002188886
+2006,Missouri,False,Claire McCaskill,democrat,1055255,2128459,James M. Talent,republican,1006941,48314,0.022699051285460514
+2006,Missouri,False,Claire McCaskill,democrat,1055255,2128459,James M. Talent,republican,1006941,48314,0.022699051285460514
+2010,Missouri,False,Roy Blunt,republican,1054160,1943899,Robin Carnahan,democrat,789736,264424,0.13602764341151474
+2010,Missouri,False,Roy Blunt,republican,1054160,1943899,Robin Carnahan,democrat,789736,264424,0.13602764341151474
+2012,Missouri,False,Claire McCaskill,democrat,1494125,2725793,W. Todd Akin,republican,1066159,427966,0.15700605291744457
+2012,Missouri,False,Claire McCaskill,democrat,1494125,2725793,W. Todd Akin,republican,1066159,427966,0.15700605291744457
+2016,Missouri,False,Roy Blunt,republican,1378458,2802641,Jason Kander,democrat,1300200,78258,0.027922948390464553
+2016,Missouri,False,Roy Blunt,republican,1378458,2802641,Jason Kander,democrat,1300200,78258,0.027922948390464553
+2018,Missouri,False,Josh Hawley,republican,1254927,2442289,Claire McCaskill,democrat,1112935,141992,0.05813890166151514
+2018,Missouri,False,Josh Hawley,republican,1254927,2442289,Claire McCaskill,democrat,1112935,141992,0.05813890166151514
+2000,Montana,False,Conrad Burns,republican,208082,411601,Brian Schweitzer,democrat,194430,13652,0.03316804380941735
+2000,Montana,False,Conrad Burns,republican,208082,411601,Brian Schweitzer,democrat,194430,13652,0.03316804380941735
+2002,Montana,False,Max Baucus,democrat,204853,326537,Mike Taylor,republican,103611,101242,0.31004755969461345
+2002,Montana,False,Max Baucus,democrat,204853,326537,Mike Taylor,republican,103611,101242,0.31004755969461345
+2006,Montana,False,Jon Tester,democrat,199845,406505,Conrad Burns,republican,196283,3562,0.008762499846250382
+2006,Montana,False,Jon Tester,democrat,199845,406505,Conrad Burns,republican,196283,3562,0.008762499846250382
+2008,Montana,False,Max Baucus,democrat,348289,477658,Bob Kelleher,republican,129369,218920,0.4583195508083189
+2008,Montana,False,Max Baucus,democrat,348289,477658,Bob Kelleher,republican,129369,218920,0.4583195508083189
+2012,Montana,False,Jon Tester,democrat,236123,486066,Denny Rehberg,republican,218051,18072,0.03718013603090936
+2012,Montana,False,Jon Tester,democrat,236123,486066,Denny Rehberg,republican,218051,18072,0.03718013603090936
+2014,Montana,False,Steve Daines,republican,213709,369826,Amanda Curtis,democrat,148184,65525,0.17717791610108535
+2014,Montana,False,Steve Daines,republican,213709,369826,Amanda Curtis,democrat,148184,65525,0.17717791610108535
+2018,Montana,False,Jon Tester,democrat,253876,504384,Matt Rosendale,republican,235963,17913,0.035514607917776886
+2018,Montana,False,Jon Tester,democrat,253876,504384,Matt Rosendale,republican,235963,17913,0.035514607917776886
+2000,Nebraska,False,Ben Nelson,democrat,353093,692350,Don Stenberg,republican,337977,15116,0.02183288799017835
+2000,Nebraska,False,Ben Nelson,democrat,353093,692350,Don Stenberg,republican,337977,15116,0.02183288799017835
+2002,Nebraska,False,Chuck Hagel,republican,397438,480217,Charlie A. Matulka,democrat,70290,327148,0.6812503514036362
+2002,Nebraska,False,Chuck Hagel,republican,397438,480217,Charlie A. Matulka,democrat,70290,327148,0.6812503514036362
+2006,Nebraska,False,E. Benjamin Nelson,democrat,378388,592316,Pete Ricketts,republican,213928,164460,0.277655845866058
+2006,Nebraska,False,E. Benjamin Nelson,democrat,378388,592316,Pete Ricketts,republican,213928,164460,0.277655845866058
+2008,Nebraska,False,Mike Johanns,republican,455854,792511,Scott Kleeb,democrat,317456,138398,0.1746322763974254
+2008,Nebraska,False,Mike Johanns,republican,455854,792511,Scott Kleeb,democrat,317456,138398,0.1746322763974254
+2012,Nebraska,False,Deb Fischer,republican,455593,788572,Bob Kerrey,democrat,332979,122614,0.15548865544300328
+2012,Nebraska,False,Deb Fischer,republican,455593,788572,Bob Kerrey,democrat,332979,122614,0.15548865544300328
+2014,Nebraska,False,Ben Sasse,republican,347636,540337,Dave Domina,democrat,170127,177509,0.32851535245596725
+2014,Nebraska,False,Ben Sasse,republican,347636,540337,Dave Domina,democrat,170127,177509,0.32851535245596725
+2018,Nebraska,False,Deb Fischer,republican,403151,698883,Jane Raybould,democrat,269917,133234,0.1906384902766271
+2018,Nebraska,False,Deb Fischer,republican,403151,698883,Jane Raybould,democrat,269917,133234,0.1906384902766271
+2000,Nevada,False,John Ensign,republican,330687,600776,Ed Bernstein,democrat,238260,92427,0.15384602580662343
+2000,Nevada,False,John Ensign,republican,330687,600776,Ed Bernstein,democrat,238260,92427,0.15384602580662343
+2004,Nevada,False,Harry Reid,democrat,494805,810068,Richard Ziser,republican,284640,210165,0.25944118271552513
+2004,Nevada,False,Harry Reid,democrat,494805,810068,Richard Ziser,republican,284640,210165,0.25944118271552513
+2006,Nevada,False,John Ensign,republican,322501,582572,Jack Carter,democrat,238796,83705,0.14368181100361838
+2006,Nevada,False,John Ensign,republican,322501,582572,Jack Carter,democrat,238796,83705,0.14368181100361838
+2010,Nevada,False,Harry Reid,democrat,362785,721404,Sharron Angle,republican,321361,41424,0.05742136167806111
+2010,Nevada,False,Harry Reid,democrat,362785,721404,Sharron Angle,republican,321361,41424,0.05742136167806111
+2012,Nevada,False,Dean Heller,republican,457656,997805,Shelley Berkley,democrat,446080,11576,0.011601465216149465
+2012,Nevada,False,Dean Heller,republican,457656,997805,Shelley Berkley,democrat,446080,11576,0.011601465216149465
+2016,Nevada,False,Catherine Cortez Masto,democrat,521994,1108294,Joseph J. Heck,republican,495079,26915,0.02428507237249322
+2016,Nevada,False,Catherine Cortez Masto,democrat,521994,1108294,Joseph J. Heck,republican,495079,26915,0.02428507237249322
+2018,Nevada,False,Jacky Rosen,democrat,490071,972132,Dean Heller,republican,441202,48869,0.05026992219163651
+2018,Nevada,False,Jacky Rosen,democrat,490071,972132,Dean Heller,republican,441202,48869,0.05026992219163651
+2002,New Hampshire,False,John E. Sununu,republican,227229,447135,Jeanne Shaheen,democrat,207478,19751,0.04417234168651524
+2002,New Hampshire,False,John E. Sununu,republican,227229,447135,Jeanne Shaheen,democrat,207478,19751,0.04417234168651524
+2004,New Hampshire,False,Judd Gregg,republican,434847,657086,Doris R. Haddock,democrat,221549,213298,0.3246119990381776
+2004,New Hampshire,False,Judd Gregg,republican,434847,657086,Doris R. Haddock,democrat,221549,213298,0.3246119990381776
+2008,New Hampshire,False,Jeanne Shaheen,democrat,358438,694787,John E. Sununu,republican,314403,44035,0.06337913633962639
+2008,New Hampshire,False,Jeanne Shaheen,democrat,358438,694787,John E. Sununu,republican,314403,44035,0.06337913633962639
+2010,New Hampshire,False,Kelly Ayotte,republican,273218,454710,Paul W. Hodes,democrat,167545,105673,0.23239647247696327
+2010,New Hampshire,False,Kelly Ayotte,republican,273218,454710,Paul W. Hodes,democrat,167545,105673,0.23239647247696327
+2014,New Hampshire,False,Jeanne Shaheen,democrat,251184,488159,Scott P. Brown,republican,235347,15837,0.0324422985133942
+2014,New Hampshire,False,Jeanne Shaheen,democrat,251184,488159,Scott P. Brown,republican,235347,15837,0.0324422985133942
+2016,New Hampshire,False,Maggie Hassan,democrat,354649,739140,Kelly Ayotte,republican,353632,1017,0.0013759233704034313
+2016,New Hampshire,False,Maggie Hassan,democrat,354649,739140,Kelly Ayotte,republican,353632,1017,0.0013759233704034313
+2000,New Jersey,False,Jon S. Corzine,democrat,1511237,3015662,Bob Franks,republican,1420267,90970,0.030165847498824505
+2000,New Jersey,False,Jon S. Corzine,democrat,1511237,3015662,Bob Franks,republican,1420267,90970,0.030165847498824505
+2002,New Jersey,False,Frank R. Lautenberg,democrat,1138193,2112604,Douglas R. Forrester,republican,928439,209754,0.09928694634678337
+2002,New Jersey,False,Frank R. Lautenberg,democrat,1138193,2112604,Douglas R. Forrester,republican,928439,209754,0.09928694634678337
+2006,New Jersey,False,Robert Menendez,democrat,58333,101973,"Thomas H. Kean, Jr.",republican,41998,16335,0.1601894619163896
+2006,New Jersey,False,Robert Menendez,democrat,58333,101973,"Thomas H. Kean, Jr.",republican,41998,16335,0.1601894619163896
+2008,New Jersey,False,Frank R. Lautenberg,democrat,1951218,3482445,Dick Zimmer,republican,1461025,490193,0.14076116062134514
+2008,New Jersey,False,Frank R. Lautenberg,democrat,1951218,3482445,Dick Zimmer,republican,1461025,490193,0.14076116062134514
+2012,New Jersey,False,Robert Menendez,democrat,1987680,3376649,Joe Kyrillos,republican,1329534,658146,0.19491099015621693
+2012,New Jersey,False,Robert Menendez,democrat,1987680,3376649,Joe Kyrillos,republican,1329534,658146,0.19491099015621693
+2014,New Jersey,False,Cory A. Booker,democrat,1043866,1869535,Jeff Bell,republican,791297,252569,0.13509723005988117
+2014,New Jersey,False,Cory A. Booker,democrat,1043866,1869535,Jeff Bell,republican,791297,252569,0.13509723005988117
+2018,New Jersey,False,Robert Menendez,democrat,1711654,3169310,Bob Hugin,republican,1357355,354299,0.11179057902193218
+2018,New Jersey,False,Robert Menendez,democrat,1711654,3169310,Bob Hugin,republican,1357355,354299,0.11179057902193218
+2000,New Mexico,False,Jeff Bingaman,democrat,363744,589526,Bill Redmond,republican,225517,138227,0.23447142280408323
+2000,New Mexico,False,Jeff Bingaman,democrat,363744,589526,Bill Redmond,republican,225517,138227,0.23447142280408323
+2002,New Mexico,False,Pete V. Domenici,republican,314193,483056,Gloria Tristani,democrat,168863,145330,0.3008553873670961
+2002,New Mexico,False,Pete V. Domenici,republican,314193,483056,Gloria Tristani,democrat,168863,145330,0.3008553873670961
+2006,New Mexico,False,Jeff Bingaman,democrat,394365,558550,Allen W. McCulloch,republican,163826,230539,0.41274550174559127
+2006,New Mexico,False,Jeff Bingaman,democrat,394365,558550,Allen W. McCulloch,republican,163826,230539,0.41274550174559127
+2008,New Mexico,False,Tom Udall,democrat,505128,823650,Steve Pearce,republican,318522,186606,0.22655982516845752
+2008,New Mexico,False,Tom Udall,democrat,505128,823650,Steve Pearce,republican,318522,186606,0.22655982516845752
+2012,New Mexico,False,Martin Heinrich,democrat,395717,775793,Heather A. Wilson,republican,351260,44457,0.05730523477267779
+2012,New Mexico,False,Martin Heinrich,democrat,395717,775793,Heather A. Wilson,republican,351260,44457,0.05730523477267779
+2014,New Mexico,False,Tom Udall,democrat,286409,515506,Allen E. Weh,republican,229097,57312,0.11117620357474012
+2014,New Mexico,False,Tom Udall,democrat,286409,515506,Allen E. Weh,republican,229097,57312,0.11117620357474012
+2018,New Mexico,False,Martin T Heinrich,democrat,376998,697012,Mick Rich,republican,212813,164185,0.2355554854148852
+2018,New Mexico,False,Martin T Heinrich,democrat,376998,697012,Mick Rich,republican,212813,164185,0.2355554854148852
+2000,New York,False,Hillary Rodham Clinton,democrat,3562415,6959662,Rick Lazio,republican,2724589,837826,0.12038314504353803
+2000,New York,False,Hillary Rodham Clinton,democrat,3562415,6959662,Rick Lazio,republican,2724589,837826,0.12038314504353803
+2004,New York,False,Charles E. Schumer,democrat,4384907,7447818,Howard Mills,republican,1625069,2759838,0.3705565844922634
+2004,New York,False,Charles E. Schumer,democrat,4384907,7447818,Howard Mills,republican,1625069,2759838,0.3705565844922634
+2006,New York,False,Hillary Rodham Clinton,democrat,2698931,4700632,John Spencer,republican,1212902,1486029,0.3161338730621755
+2006,New York,False,Hillary Rodham Clinton,democrat,2698931,4700632,John Spencer,republican,1212902,1486029,0.3161338730621755
+2010,New York,False,Charles E. Schumer,democrat,3047880,4763899,Kirsten E. Gillibrand,democrat,2837684,210196,0.04412268186206303
+2010,New York,False,Charles E. Schumer,democrat,3047880,4763899,Kirsten E. Gillibrand,democrat,2837684,210196,0.04412268186206303
+2012,New York,False,Kirsten E. Gillibrand,democrat,4420043,7116628,Wendy Long,republican,1514647,2905396,0.40825458349094546
+2012,New York,False,Kirsten E. Gillibrand,democrat,4420043,7116628,Wendy Long,republican,1514647,2905396,0.40825458349094546
+2016,New York,False,Charles E. Schumer,democrat,4784220,7800725,Wendy Long,republican,1723927,3060293,0.3923087918110176
+2016,New York,False,Charles E. Schumer,democrat,4784220,7800725,Wendy Long,republican,1723927,3060293,0.3923087918110176
+2018,New York,False,Kirsten E. Gillibrand,democrat,3755489,6055151,Chele Chiavacci Farley,republican,1730439,2025050,0.33443426926925524
+2018,New York,False,Kirsten E. Gillibrand,democrat,3755489,6055151,Chele Chiavacci Farley,republican,1730439,2025050,0.33443426926925524
+2002,North Carolina,False,Elizabeth H. Dole,republican,1248664,2331181,Erskine B. Bowles,democrat,1047983,200681,0.08608555062862988
+2002,North Carolina,False,Elizabeth H. Dole,republican,1248664,2331181,Erskine B. Bowles,democrat,1047983,200681,0.08608555062862988
+2004,North Carolina,False,Richard Burr,republican,1791450,3472082,Erskine Bowles,democrat,1632527,158923,0.045771672443219946
+2004,North Carolina,False,Richard Burr,republican,1791450,3472082,Erskine Bowles,democrat,1632527,158923,0.045771672443219946
+2008,North Carolina,False,Kay Hagan,democrat,2249311,4271970,Elizabeth Dole,republican,1887510,361801,0.08469184006441993
+2008,North Carolina,False,Kay Hagan,democrat,2249311,4271970,Elizabeth Dole,republican,1887510,361801,0.08469184006441993
+2010,North Carolina,False,Richard Burr,republican,1458046,2660079,Elaine Marshall,democrat,1145074,312972,0.11765515234697915
+2010,North Carolina,False,Richard Burr,republican,1458046,2660079,Elaine Marshall,democrat,1145074,312972,0.11765515234697915
+2014,North Carolina,False,Thom Tillis,republican,1423259,2915281,Kay R. Hagan,democrat,1377651,45608,0.015644461031372237
+2014,North Carolina,False,Thom Tillis,republican,1423259,2915281,Kay R. Hagan,democrat,1377651,45608,0.015644461031372237
+2016,North Carolina,False,Richard Burr,republican,2395376,4691133,Deborah K. Ross,democrat,2128165,267211,0.05696086638345155
+2016,North Carolina,False,Richard Burr,republican,2395376,4691133,Deborah K. Ross,democrat,2128165,267211,0.05696086638345155
+2000,North Dakota,False,Kent Conrad,democratic-nonpartisan league,176470,287539,Duane Sand,republican,111069,65401,0.22745088492343646
+2000,North Dakota,False,Kent Conrad,democratic-nonpartisan league,176470,287539,Duane Sand,republican,111069,65401,0.22745088492343646
+2004,North Dakota,False,Byron L. Dorgan,democrat,212143,310696,Mike Liffrig,republican,98553,113590,0.36559852717769137
+2004,North Dakota,False,Byron L. Dorgan,democrat,212143,310696,Mike Liffrig,republican,98553,113590,0.36559852717769137
+2006,North Dakota,False,Kent Conrad,democrat,150146,218152,Dwight Grotberg,republican,64417,85729,0.39297829036635007
+2006,North Dakota,False,Kent Conrad,democrat,150146,218152,Dwight Grotberg,republican,64417,85729,0.39297829036635007
+2010,North Dakota,False,John Hoeven,republican,181689,238534,Tracy Potter,democratic-nonpartisan league,52955,128734,0.5396882624699204
+2010,North Dakota,False,John Hoeven,republican,181689,238534,Tracy Potter,democratic-nonpartisan league,52955,128734,0.5396882624699204
+2012,North Dakota,False,Heidi Heitkamp,democrat,161337,321144,Rick Berg,republican,158401,2936,0.009142316219515223
+2012,North Dakota,False,Heidi Heitkamp,democrat,161337,321144,Rick Berg,republican,158401,2936,0.009142316219515223
+2016,North Dakota,False,John Hoeven,republican,268788,342501,Eliot Glassheim,democrat,58116,210672,0.6150989340177109
+2016,North Dakota,False,John Hoeven,republican,268788,342501,Eliot Glassheim,democrat,58116,210672,0.6150989340177109
+2018,North Dakota,False,Kevin Cramer,republican,179720,326138,Heidi Heitkamp,democratic-npl,144376,35344,0.108371302945379
+2018,North Dakota,False,Kevin Cramer,republican,179720,326138,Heidi Heitkamp,democratic-npl,144376,35344,0.108371302945379
+2000,Ohio,False,Mike DeWine,republican,2665512,4448801,Ted Celeste,democrat,1595066,1070446,0.24061449365795406
+2000,Ohio,False,Mike DeWine,republican,2665512,4448801,Ted Celeste,democrat,1595066,1070446,0.24061449365795406
+2004,Ohio,False,George V. Voinovich,republican,3464356,5425823,Eric D. Fingerhut,democrat,1961171,1503185,0.2770427638350901
+2004,Ohio,False,George V. Voinovich,republican,3464356,5425823,Eric D. Fingerhut,democrat,1961171,1503185,0.2770427638350901
+2006,Ohio,False,Sherrod Brown,democrat,2257369,4019236,Mike DeWine,republican,1761037,496332,0.12348914072226663
+2006,Ohio,False,Sherrod Brown,democrat,2257369,4019236,Mike DeWine,republican,1761037,496332,0.12348914072226663
+2010,Ohio,False,Rob Portman,republican,2168742,3815098,Lee Fisher,democrat,1503297,665445,0.17442409080972499
+2010,Ohio,False,Rob Portman,republican,2168742,3815098,Lee Fisher,democrat,1503297,665445,0.17442409080972499
+2012,Ohio,False,Sherrod Brown,democrat,2762690,5449018,Josh Mandel,republican,2435712,326978,0.06000677553276568
+2012,Ohio,False,Sherrod Brown,democrat,2762690,5449018,Josh Mandel,republican,2435712,326978,0.06000677553276568
+2016,Ohio,False,Rob Portman,republican,3118567,5374164,Ted Strickland,democrat,1996908,1121659,0.20871320637033036
+2016,Ohio,False,Rob Portman,republican,3118567,5374164,Ted Strickland,democrat,1996908,1121659,0.20871320637033036
+2018,Ohio,False,Sherrod Brown,democrat,2355923,4410898,Jim Renacci,republican,2053963,301960,0.06845771541305196
+2018,Ohio,False,Sherrod Brown,democrat,2355923,4410898,Jim Renacci,republican,2053963,301960,0.06845771541305196
+2002,Oklahoma,False,James M. Inhofe,republican,583579,1018424,David Walters,democrat,369789,213790,0.20992238988869077
+2002,Oklahoma,False,James M. Inhofe,republican,583579,1018424,David Walters,democrat,369789,213790,0.20992238988869077
+2004,Oklahoma,False,Tom Coburn,republican,763433,1446846,Brad Carson,democrat,596750,166683,0.11520438249820647
+2004,Oklahoma,False,Tom Coburn,republican,763433,1446846,Brad Carson,democrat,596750,166683,0.11520438249820647
+2008,Oklahoma,False,James M. Inhofe,republican,763375,1346819,Andrew Rice,democrat,527736,235639,0.1749596642162013
+2008,Oklahoma,False,James M. Inhofe,republican,763375,1346819,Andrew Rice,democrat,527736,235639,0.1749596642162013
+2010,Oklahoma,False,Thomas A. Coburn,republican,718482,1017151,Jim Rogers,democrat,265814,452668,0.445035201263136
+2010,Oklahoma,False,Thomas A. Coburn,republican,718482,1017151,Jim Rogers,democrat,265814,452668,0.445035201263136
+2014,Oklahoma,False,James M. Inhofe,republican,558166,820733,James Lankford,republican,557002,1164,0.001418244422973114
+2014,Oklahoma,False,James M. Inhofe,republican,558166,820733,James Lankford,republican,557002,1164,0.001418244422973114
+2016,Oklahoma,False,James Lankford,republican,980892,1448047,Mike Workman,democrat,355911,624981,0.43160270350340846
+2016,Oklahoma,False,James Lankford,republican,980892,1448047,Mike Workman,democrat,355911,624981,0.43160270350340846
+2002,Oregon,False,Gordon Smith,republican,712287,1267221,Bill Bradbury,democrat,501898,210389,0.16602392163639967
+2002,Oregon,False,Gordon Smith,republican,712287,1267221,Bill Bradbury,democrat,501898,210389,0.16602392163639967
+2004,Oregon,False,Ron Wyden,democrat,1128728,1780550,Al King,republican,565254,563474,0.31646064418297715
+2004,Oregon,False,Ron Wyden,democrat,1128728,1780550,Al King,republican,565254,563474,0.31646064418297715
+2008,Oregon,False,Jeff Merkley,democrat,864392,1767504,Gordon H. Smith,republican,805159,59233,0.03351222967529349
+2008,Oregon,False,Jeff Merkley,democrat,864392,1767504,Gordon H. Smith,republican,805159,59233,0.03351222967529349
+2010,Oregon,False,Ron Wyden,democrat,825507,1442588,Jim Huffman,republican,566199,259308,0.17975194580850523
+2010,Oregon,False,Ron Wyden,democrat,825507,1442588,Jim Huffman,republican,566199,259308,0.17975194580850523
+2014,Oregon,False,Jeff Merkley,democrat,814537,1461618,Monica Wehby,republican,538847,275690,0.18861973511546792
+2014,Oregon,False,Jeff Merkley,democrat,814537,1461618,Monica Wehby,republican,538847,275690,0.18861973511546792
+2016,Oregon,False,Ron Wyden,democrat,1105119,1952478,Mark Callahan,republican,651106,454013,0.23253168537622448
+2016,Oregon,False,Ron Wyden,democrat,1105119,1952478,Mark Callahan,republican,651106,454013,0.23253168537622448
+2000,Pennsylvania,False,Rick Santorum,republican,2481962,4735116,Ron Klink,democrat,2154908,327054,0.06906990240577005
+2000,Pennsylvania,False,Rick Santorum,republican,2481962,4735116,Ron Klink,democrat,2154908,327054,0.06906990240577005
+2004,Pennsylvania,False,Arlen Specter,republican,2925080,5559105,Joseph M. Hoeffel,democrat,2334126,590954,0.1063038025005823
+2004,Pennsylvania,False,Arlen Specter,republican,2925080,5559105,Joseph M. Hoeffel,democrat,2334126,590954,0.1063038025005823
+2006,Pennsylvania,False,"Bob Casey, Jr.",democrat,2392984,4081043,Rick Santorum,republican,1684778,708206,0.17353553981175884
+2006,Pennsylvania,False,"Bob Casey, Jr.",democrat,2392984,4081043,Rick Santorum,republican,1684778,708206,0.17353553981175884
+2010,Pennsylvania,False,Pat Toomey,republican,2028945,3977661,Joe Sestak,democrat,1948716,80229,0.020169893814480366
+2010,Pennsylvania,False,Pat Toomey,republican,2028945,3977661,Joe Sestak,democrat,1948716,80229,0.020169893814480366
+2012,Pennsylvania,False,"Robert P. Casey, Jr.",democrat,3021364,5627422,Tom Smith,republican,2509132,512232,0.09102427363720017
+2012,Pennsylvania,False,"Robert P. Casey, Jr.",democrat,3021364,5627422,Tom Smith,republican,2509132,512232,0.09102427363720017
+2016,Pennsylvania,False,Patrick J. Toomey,republican,2951702,6051856,Katie McGinty,democrat,2865012,86690,0.014324531185143874
+2016,Pennsylvania,False,Patrick J. Toomey,republican,2951702,6051856,Katie McGinty,democrat,2865012,86690,0.014324531185143874
+2018,Pennsylvania,False,Robert P Casey Jr,democrat,2777680,4994643,Louis J. Barletta,republican,2134848,642832,0.1287042937803563
+2018,Pennsylvania,False,Robert P Casey Jr,democrat,2777680,4994643,Louis J. Barletta,republican,2134848,642832,0.1287042937803563
+2000,Rhode Island,False,Lincoln D. Chafee,republican,222588,391353,Robert A. Weygand,democrat,161023,61565,0.1573132185009441
+2000,Rhode Island,False,Lincoln D. Chafee,republican,222588,391353,Robert A. Weygand,democrat,161023,61565,0.1573132185009441
+2002,Rhode Island,False,Jack Reed,democrat,253774,323582,Robert G. Tingle,republican,69808,183966,0.5685297698883127
+2002,Rhode Island,False,Jack Reed,democrat,253774,323582,Robert G. Tingle,republican,69808,183966,0.5685297698883127
+2006,Rhode Island,False,Sheldon Whitehouse,democrat,206043,384993,Lincoln Chafee,republican,178950,27093,0.07037270807521173
+2006,Rhode Island,False,Sheldon Whitehouse,democrat,206043,384993,Lincoln Chafee,republican,178950,27093,0.07037270807521173
+2008,Rhode Island,False,Jack Reed,democrat,320644,438812,Robert G. Tingle,republican,116174,204470,0.4659626445949518
+2008,Rhode Island,False,Jack Reed,democrat,320644,438812,Robert G. Tingle,republican,116174,204470,0.4659626445949518
+2012,Rhode Island,False,Sheldon Whitehouse,democrat,271034,418189,Benjamin Barrett Hinckley III,republican,146222,124812,0.2984583525630755
+2012,Rhode Island,False,Sheldon Whitehouse,democrat,271034,418189,Benjamin Barrett Hinckley III,republican,146222,124812,0.2984583525630755
+2014,Rhode Island,False,Jack Reed,democrat,223675,316898,Mark S. Zaccaria,republican,92684,130991,0.4133538236277919
+2014,Rhode Island,False,Jack Reed,democrat,223675,316898,Mark S. Zaccaria,republican,92684,130991,0.4133538236277919
+2018,Rhode Island,False,Sheldon Whitehouse,democrat,231477,376738,"Robert G. Flanders, Jr.",republican,144421,87056,0.23107836215088468
+2018,Rhode Island,False,Sheldon Whitehouse,democrat,231477,376738,"Robert G. Flanders, Jr.",republican,144421,87056,0.23107836215088468
+2002,South Carolina,False,Lindsey O. Graham,republican,600010,1102912,Alex Sanders,democrat,487359,112651,0.10213960859977944
+2002,South Carolina,False,Lindsey O. Graham,republican,600010,1102912,Alex Sanders,democrat,487359,112651,0.10213960859977944
+2004,South Carolina,False,Jim DeMint,republican,857167,1597221,Inez Tenenbaum,democrat,704384,152783,0.0956555166755258
+2004,South Carolina,False,Jim DeMint,republican,857167,1597221,Inez Tenenbaum,democrat,704384,152783,0.0956555166755258
+2008,South Carolina,False,Lindsey Graham,republican,1076534,1871431,Bob Conley,democrat,790621,285913,0.15277774067010752
+2008,South Carolina,False,Lindsey Graham,republican,1076534,1871431,Bob Conley,democrat,790621,285913,0.15277774067010752
+2010,South Carolina,False,Jim DeMint,republican,810771,1318794,Alvin M. Greene,democrat,364598,446173,0.3383189489791431
+2010,South Carolina,False,Jim DeMint,republican,810771,1318794,Alvin M. Greene,democrat,364598,446173,0.3383189489791431
+2014,South Carolina,False,Tim Scott,republican,757215,1238982,Lindsey Graham,republican,672941,84274,0.0680187444208229
+2014,South Carolina,False,Tim Scott,republican,757215,1238982,Lindsey Graham,republican,672941,84274,0.0680187444208229
+2016,South Carolina,False,Tim Scott,republican,1241609,2049893,Thomas Dixon,democrat,704540,537069,0.26199855309521036
+2016,South Carolina,False,Tim Scott,republican,1241609,2049893,Thomas Dixon,democrat,704540,537069,0.26199855309521036
+2002,South Dakota,False,Tim Johnson,democrat,167481,337501,John Thune,republican,166949,532,0.0015762916258025839
+2002,South Dakota,False,Tim Johnson,democrat,167481,337501,John Thune,republican,166949,532,0.0015762916258025839
+2004,South Dakota,False,John Thune,republican,197848,391188,Tom Daschle,democrat,193340,4508,0.0115238708753847
+2004,South Dakota,False,John Thune,republican,197848,391188,Tom Daschle,democrat,193340,4508,0.0115238708753847
+2008,South Dakota,False,Tim Johnson,democrat,237889,380673,Joel Dykstra,republican,142784,95105,0.2498338468974684
+2008,South Dakota,False,Tim Johnson,democrat,237889,380673,Joel Dykstra,republican,142784,95105,0.2498338468974684
+2014,South Dakota,False,Mike Rounds,republican,140741,279412,Rick Weiland,democrat,82456,58285,0.20859877170629748
+2014,South Dakota,False,Mike Rounds,republican,140741,279412,Rick Weiland,democrat,82456,58285,0.20859877170629748
+2016,South Dakota,False,John R. Thune,republican,265516,369656,Jay Williams,democrat,104140,161376,0.4365572315882875
+2016,South Dakota,False,John R. Thune,republican,265516,369656,Jay Williams,democrat,104140,161376,0.4365572315882875
+2000,Tennessee,False,Bill Frist,republican,1255444,1928613,Jeff Clark,democrat,621152,634292,0.3288850588479908
+2000,Tennessee,False,Bill Frist,republican,1255444,1928613,Jeff Clark,democrat,621152,634292,0.3288850588479908
+2002,Tennessee,False,Lamar Alexander,republican,891498,1642432,Bob Clement,democrat,728232,163266,0.09940502864045508
+2002,Tennessee,False,Lamar Alexander,republican,891498,1642432,Bob Clement,democrat,728232,163266,0.09940502864045508
+2006,Tennessee,False,Bob Corker,republican,929911,1833695,"Harold E. Ford, Jr.",democrat,879976,49935,0.027231900615969418
+2006,Tennessee,False,Bob Corker,republican,929911,1833695,"Harold E. Ford, Jr.",democrat,879976,49935,0.027231900615969418
+2008,Tennessee,False,Lamar Alexander,republican,1579477,2424585,Robert D. Tuke,democrat,767236,812241,0.33500207251962705
+2008,Tennessee,False,Lamar Alexander,republican,1579477,2424585,Robert D. Tuke,democrat,767236,812241,0.33500207251962705
+2012,Tennessee,False,Bob Corker,republican,1506443,2321477,Mark E. Clayton,democrat,705882,800561,0.34484985205539403
+2012,Tennessee,False,Bob Corker,republican,1506443,2321477,Mark E. Clayton,democrat,705882,800561,0.34484985205539403
+2014,Tennessee,False,Lamar Alexander,republican,850087,1374065,Gordon Ball,democrat,437848,412239,0.3000141914683803
+2014,Tennessee,False,Lamar Alexander,republican,850087,1374065,Gordon Ball,democrat,437848,412239,0.3000141914683803
+2018,Tennessee,False,Marsha Blackburn,republican,1227483,2243740,Phil Bredesen,democrat,985450,242033,0.10787034148341612
+2018,Tennessee,False,Marsha Blackburn,republican,1227483,2243740,Phil Bredesen,democrat,985450,242033,0.10787034148341612
+2000,Texas,False,Kay Bailey Hutchison,republican,4078954,6267964,Gene Kelly,democrat,2025024,2053930,0.3276869490635237
+2000,Texas,False,Kay Bailey Hutchison,republican,4078954,6267964,Gene Kelly,democrat,2025024,2053930,0.3276869490635237
+2002,Texas,False,John Cornyn,republican,2496243,4514012,Ron Kirk,democrat,1955758,540485,0.1197349497520166
+2002,Texas,False,John Cornyn,republican,2496243,4514012,Ron Kirk,democrat,1955758,540485,0.1197349497520166
+2006,Texas,False,Kay Bailey Hutchison,republican,2661789,4314663,Barbara Ann Radnofsky,democrat,1555202,1106587,0.25647124700121426
+2006,Texas,False,Kay Bailey Hutchison,republican,2661789,4314663,Barbara Ann Radnofsky,democrat,1555202,1106587,0.25647124700121426
+2008,Texas,False,John Cornyn,republican,4337469,7912075,"Richard J. ""Rick"" Noriega",democrat,3389365,948104,0.11983000666702481
+2008,Texas,False,John Cornyn,republican,4337469,7912075,"Richard J. ""Rick"" Noriega",democrat,3389365,948104,0.11983000666702481
+2012,Texas,False,Ted Cruz,republican,4440137,7864822,Paul Sadler,democrat,3194927,1245210,0.15832653300990157
+2012,Texas,False,Ted Cruz,republican,4440137,7864822,Paul Sadler,democrat,3194927,1245210,0.15832653300990157
+2014,Texas,False,John Cornyn,republican,2861531,4648358,David M. Alameel,democrat,1597387,1264144,0.2719549569977184
+2014,Texas,False,John Cornyn,republican,2861531,4648358,David M. Alameel,democrat,1597387,1264144,0.2719549569977184
+2018,Texas,False,Ted Cruz,republican,4260553,8371655,Beto O'Rourke,democrat,4045632,214921,0.025672462613425873
+2018,Texas,False,Ted Cruz,republican,4260553,8371655,Beto O'Rourke,democrat,4045632,214921,0.025672462613425873
+2000,Utah,False,Orrin G. Hatch,republican,504803,769704,Scott N. Howell,democrat,242569,262234,0.3406946046792013
+2000,Utah,False,Orrin G. Hatch,republican,504803,769704,Scott N. Howell,democrat,242569,262234,0.3406946046792013
+2004,Utah,False,Robert F. Bennett,republican,626640,911726,R. Paul Van Dam,democrat,258955,367685,0.4032845394339966
+2004,Utah,False,Robert F. Bennett,republican,626640,911726,R. Paul Van Dam,democrat,258955,367685,0.4032845394339966
+2006,Utah,False,Orrin G. Hatch,republican,356238,571252,Pete Ashdown,democrat,177459,178779,0.31295995462597936
+2006,Utah,False,Orrin G. Hatch,republican,356238,571252,Pete Ashdown,democrat,177459,178779,0.31295995462597936
+2010,Utah,False,Mike Lee,republican,360403,585230,Sam F. Granato,democrat,191732,168671,0.28821318114245686
+2010,Utah,False,Mike Lee,republican,360403,585230,Sam F. Granato,democrat,191732,168671,0.28821318114245686
+2012,Utah,False,Orrin G. Hatch,republican,657608,1006901,Scott Howell,democrat,301873,355735,0.3532968981061694
+2012,Utah,False,Orrin G. Hatch,republican,657608,1006901,Scott Howell,democrat,301873,355735,0.3532968981061694
+2016,Utah,False,Mike Lee,republican,760220,1115583,Misty K. Snow,democrat,301858,458362,0.4108721628063533
+2016,Utah,False,Mike Lee,republican,760220,1115583,Misty K. Snow,democrat,301858,458362,0.4108721628063533
+2018,Utah,False,Mitt Romney,republican,665215,1062845,Jenny Wilson,democrat,328541,336674,0.3167667910184458
+2018,Utah,False,Mitt Romney,republican,665215,1062845,Jenny Wilson,democrat,328541,336674,0.3167667910184458
+2000,Vermont,False,James M. Jeffords,republican,189133,288500,Ed Flanagan,democrat,73352,115781,0.40132062391681106
+2000,Vermont,False,James M. Jeffords,republican,189133,288500,Ed Flanagan,democrat,73352,115781,0.40132062391681106
+2004,Vermont,False,Patrick J. Leahy,democrat,216972,307208,Jack McMullen,republican,75398,141574,0.4608408635191792
+2004,Vermont,False,Patrick J. Leahy,democrat,216972,307208,Jack McMullen,republican,75398,141574,0.4608408635191792
+2006,Vermont,False,Bernard Sanders,independent,171638,262419,Rich Tarrant,republican,84924,86714,0.3304410122742637
+2006,Vermont,False,Bernard Sanders,independent,171638,262419,Rich Tarrant,republican,84924,86714,0.3304410122742637
+2010,Vermont,False,Patrick J. Leahy,democrat,151281,235178,Len Britton,republican,72699,78582,0.3341383972990671
+2010,Vermont,False,Patrick J. Leahy,democrat,151281,235178,Len Britton,republican,72699,78582,0.3341383972990671
+2012,Vermont,False,Bernard Sanders,independent,207848,292762,John MacGovern,republican,72898,134950,0.4609546320902303
+2012,Vermont,False,Bernard Sanders,independent,207848,292762,John MacGovern,republican,72898,134950,0.4609546320902303
+2016,Vermont,False,Patrick J. Leahy,democrat,192243,320467,Scott Milne,republican,103637,88606,0.27649024704571773
+2016,Vermont,False,Patrick J. Leahy,democrat,192243,320467,Scott Milne,republican,103637,88606,0.27649024704571773
+2018,Vermont,False,Bernie Sanders,independent,183529,272624,Lawrence Zupan,republican,74663,108866,0.3993265449850344
+2018,Vermont,False,Bernie Sanders,independent,183529,272624,Lawrence Zupan,republican,74663,108866,0.3993265449850344
+2000,Virginia,False,George F. Allen,republican,1420460,2718301,Charles S. Robb,democrat,1296093,124367,0.04575173978157676
+2000,Virginia,False,George F. Allen,republican,1420460,2718301,Charles S. Robb,democrat,1296093,124367,0.04575173978157676
+2002,Virginia,False,John W. Warner,republican,1229894,1489422,Nancy B. Spannaus,independent,145102,1084792,0.7283308558622069
+2002,Virginia,False,John W. Warner,republican,1229894,1489422,Nancy B. Spannaus,independent,145102,1084792,0.7283308558622069
+2006,Virginia,False,"James H. ""Jim"" Webb, Jr.",democrat,1175606,2370445,George Allen,republican,1166277,9329,0.0039355479667320115
+2006,Virginia,False,"James H. ""Jim"" Webb, Jr.",democrat,1175606,2370445,George Allen,republican,1166277,9329,0.0039355479667320115
+2008,Virginia,False,Mark R. Warner,democrat,2369327,3643294,"James S. ""Jim"" Gilmore III",republican,1228830,1140497,0.31304006758718894
+2008,Virginia,False,Mark R. Warner,democrat,2369327,3643294,"James S. ""Jim"" Gilmore III",republican,1228830,1140497,0.31304006758718894
+2012,Virginia,False,Timothy M. Kaine,democrat,2010067,3802196,George F. Allen,republican,1785542,224525,0.059051400822051237
+2012,Virginia,False,Timothy M. Kaine,democrat,2010067,3802196,George F. Allen,republican,1785542,224525,0.059051400822051237
+2014,Virginia,False,Mark R. Warner,democrat,1073667,2184473,Ed. W. Gillespie,republican,1055940,17727,0.008115000734730982
+2014,Virginia,False,Mark R. Warner,democrat,1073667,2184473,Ed. W. Gillespie,republican,1055940,17727,0.008115000734730982
+2018,Virginia,False,Timothy M. Kaine,democrat,1910370,3351373,Corey A. Stewart,republican,1374313,536057,0.15995145870065797
+2018,Virginia,False,Timothy M. Kaine,democrat,1910370,3351373,Corey A. Stewart,republican,1374313,536057,0.15995145870065797
+2000,Washington,False,Maria Cantwell,democrat,1199437,2461379,Slade Gorton,republican,1197208,2229,0.0009055899152466962
+2000,Washington,False,Maria Cantwell,democrat,1199437,2461379,Slade Gorton,republican,1197208,2229,0.0009055899152466962
+2004,Washington,False,Patty Murray,democrat,1549708,2818651,George R. Nethercutt,republican,1204584,345124,0.12244297005908145
+2004,Washington,False,Patty Murray,democrat,1549708,2818651,George R. Nethercutt,republican,1204584,345124,0.12244297005908145
+2006,Washington,False,Maria Cantwell,democrat,1184659,2083734,Mike McGavick,republican,832106,352553,0.16919290082131405
+2006,Washington,False,Maria Cantwell,democrat,1184659,2083734,Mike McGavick,republican,832106,352553,0.16919290082131405
+2010,Washington,False,Patty Murray,democrat,1314930,2511094,Dino Rossi,republican,1196164,118766,0.04729651697626608
+2010,Washington,False,Patty Murray,democrat,1314930,2511094,Dino Rossi,republican,1196164,118766,0.04729651697626608
+2012,Washington,False,Maria Cantwell,democrat,1855493,3069417,Michael Baumgartner,republican,1213924,641569,0.2090198236342602
+2012,Washington,False,Maria Cantwell,democrat,1855493,3069417,Michael Baumgartner,republican,1213924,641569,0.2090198236342602
+2016,Washington,False,Patty Murray,democrat,1913979,3243317,Chris Vance,republican,1329338,584641,0.18026020891574895
+2016,Washington,False,Patty Murray,democrat,1913979,3243317,Chris Vance,republican,1329338,584641,0.18026020891574895
+2018,Washington,False,Maria Cantwell,democrat,1803364,3086168,Susan Hutchison,republican,1282804,520560,0.16867519849859108
+2018,Washington,False,Maria Cantwell,democrat,1803364,3086168,Susan Hutchison,republican,1282804,520560,0.16867519849859108
+2000,West Virginia,False,Robert C. Byrd,democrat,469215,603477,David T. Gallaher,republican,121635,347580,0.5759622984803067
+2000,West Virginia,False,Robert C. Byrd,democrat,469215,603477,David T. Gallaher,republican,121635,347580,0.5759622984803067
+2002,West Virginia,False,John D. Rockefeller IV,democrat,275281,436183,Jay Wolfe,republican,160902,114379,0.26222709275693923
+2002,West Virginia,False,John D. Rockefeller IV,democrat,275281,436183,Jay Wolfe,republican,160902,114379,0.26222709275693923
+2006,West Virginia,False,Robert C. Byrd,democrat,159154,206562,John R. Raese,republican,47408,111746,0.5409804320252516
+2006,West Virginia,False,Robert C. Byrd,democrat,159154,206562,John R. Raese,republican,47408,111746,0.5409804320252516
+2008,West Virginia,False,John D. Rockefeller IV,democrat,447560,702308,Jay Wolfe,republican,254629,192931,0.27470995631546274
+2008,West Virginia,False,John D. Rockefeller IV,democrat,447560,702308,Jay Wolfe,republican,254629,192931,0.27470995631546274
+2010,West Virginia,False,Joe Manchin III,democrat,283358,529948,John R. Raese,republican,230013,53345,0.10066081955210698
+2010,West Virginia,False,Joe Manchin III,democrat,283358,529948,John R. Raese,republican,230013,53345,0.10066081955210698
+2012,West Virginia,False,Joe Manchin III,democrat,399898,660202,John R. Raese,republican,240787,159111,0.24100351104661905
+2012,West Virginia,False,Joe Manchin III,democrat,399898,660202,John R. Raese,republican,240787,159111,0.24100351104661905
+2014,West Virginia,False,Shelley Moore Capito,republican,281820,453689,Natalie Tennant,democrat,156360,125460,0.27653304356067704
+2014,West Virginia,False,Shelley Moore Capito,republican,281820,453689,Natalie Tennant,democrat,156360,125460,0.27653304356067704
+2018,West Virginia,False,Joe Manchin,democrat,288808,582911,Patrick Morrisey,republican,269872,18936,0.03248523359483696
+2018,West Virginia,False,Joe Manchin,democrat,288808,582911,Patrick Morrisey,republican,269872,18936,0.03248523359483696
+2000,Wisconsin,False,Herb Kohl,democrat,1563238,2540083,John Gillespie,republican,940744,622494,0.24506836981311242
+2000,Wisconsin,False,Herb Kohl,democrat,1563238,2540083,John Gillespie,republican,940744,622494,0.24506836981311242
+2004,Wisconsin,False,Russel D. Feingold,democrat,1632697,2949743,Tim Michels,republican,1301183,331514,0.11238741815812425
+2004,Wisconsin,False,Russel D. Feingold,democrat,1632697,2949743,Tim Michels,republican,1301183,331514,0.11238741815812425
+2006,Wisconsin,False,Herb Kohl,democrat,1439214,2138297,Robert Gerald Lorge,republican,630299,808915,0.37829871154474803
+2006,Wisconsin,False,Herb Kohl,democrat,1439214,2138297,Robert Gerald Lorge,republican,630299,808915,0.37829871154474803
+2010,Wisconsin,False,Ron Johnson,republican,1125999,2171331,Russell D. Feingold,democrat,1020958,105041,0.04837631848852153
+2010,Wisconsin,False,Ron Johnson,republican,1125999,2171331,Russell D. Feingold,democrat,1020958,105041,0.04837631848852153
+2012,Wisconsin,False,Tammy Baldwin,democrat,1547104,3009411,Tommy G. Thompson,republican,1380126,166978,0.0554852760224509
+2012,Wisconsin,False,Tammy Baldwin,democrat,1547104,3009411,Tommy G. Thompson,republican,1380126,166978,0.0554852760224509
+2016,Wisconsin,False,Ron Johnson,republican,1479471,2948741,Russ Feingold,democrat,1380335,99136,0.033619771963695644
+2016,Wisconsin,False,Ron Johnson,republican,1479471,2948741,Russ Feingold,democrat,1380335,99136,0.033619771963695644
+2018,Wisconsin,False,Tammy Baldwin,democrat,1472914,2657841,Leah Vukmir,republican,1184885,288029,0.10836953753064987
+2018,Wisconsin,False,Tammy Baldwin,democrat,1472914,2657841,Leah Vukmir,republican,1184885,288029,0.10836953753064987
+2000,Wyoming,False,Craig Thomas,republican,157622,213659,Mel Logan,democrat,47087,110535,0.5173430559910885
+2000,Wyoming,False,Craig Thomas,republican,157622,213659,Mel Logan,democrat,47087,110535,0.5173430559910885
+2002,Wyoming,False,Michael B. Enzi,republican,133710,183280,Joyce Jansa Corcoran,democrat,49570,84140,0.4590790048013968
+2002,Wyoming,False,Michael B. Enzi,republican,133710,183280,Joyce Jansa Corcoran,democrat,49570,84140,0.4590790048013968
+2006,Wyoming,False,Craig Thomas,republican,135174,196215,Dale Groutage,democrat,57671,77503,0.3949901893331294
+2006,Wyoming,False,Craig Thomas,republican,135174,196215,Dale Groutage,democrat,57671,77503,0.3949901893331294
+2008,Wyoming,False,Michael B. Enzi,republican,189046,250007,John Barrasso,republican,183063,5983,0.023931329922762146
+2008,Wyoming,False,Michael B. Enzi,republican,189046,250007,John Barrasso,republican,183063,5983,0.023931329922762146
+2012,Wyoming,False,John Barrasso,republican,185250,250700,Tim Chesnut,democrat,53019,132231,0.5274471479856402
+2012,Wyoming,False,John Barrasso,republican,185250,250700,Tim Chesnut,democrat,53019,132231,0.5274471479856402
+2014,Wyoming,False,Michael B. Enzi,republican,121554,171153,Charlie Hardy,democrat,29377,92177,0.5385649097591045
+2014,Wyoming,False,Michael B. Enzi,republican,121554,171153,Charlie Hardy,democrat,29377,92177,0.5385649097591045
+2018,Wyoming,False,John Barrasso,republican,136210,203420,Gary Trauner,democrat,61227,74983,0.3686117392586766
+2018,Wyoming,False,John Barrasso,republican,136210,203420,Gary Trauner,democrat,61227,74983,0.3686117392586766
