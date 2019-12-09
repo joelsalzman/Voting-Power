@@ -9,16 +9,10 @@ Created on Tue Dec  3 13:54:06 2019
 import geopandas as gpd
 import os, json, shapely
 from shapely.geometry import shape, mapping
-from shapely.geometry.polygon import Polygon
 from shapely.geometry.multipolygon import MultiPolygon
 import sys
 sys.path.append(r"C:\Users\joelj\OneDrive\Documents\Projects\Voting\Python")
 from useful import *
-
-
-
-### Returns a list of polygons turned into multipolygons
-multify = lambda df: [MultiPolygon([ft]) if type(ft) == Polygon else ft for ft in df.geometry]
 
 
 
@@ -63,6 +57,32 @@ def roundCoords(coords, precision=0, tree=[]):
 
 
 
+### Make invalid geometries valid
+def ensureValid(df, geom_type=MultiPolygon):
+    
+    # See if there are invalid geometries
+    old = len(df)
+    bad = len(df[~df.is_valid])
+    if bad:
+        
+        # Use a zero buffer to fix problematic intersections
+        df.geometry = df.geometry.apply(lambda g: g.buffer(0.0) if not g.is_valid else g)
+        
+        # Remove remaining invalid geometries because I have no idea how to fix them
+        df = df.loc[df.is_valid & ~df.is_empty]
+        
+        # Print how many geometries were changed
+        dropped = f", dropped {str(old - len(df))}" if old != len(df) else ""
+        print(f"        Fixed {bad} invalid polygon(s)", end = f"{dropped}\n")
+        
+        
+    # Ensure that every geometry is a MultiPolygon
+    df.geometry = df.geometry.apply(lambda g: geom_type([g]) if type(g) != geom_type else g)
+    
+    return df
+
+
+
 ### Prepares shapefiles for geocoding
 def prepShapefiles():
     
@@ -78,7 +98,7 @@ def prepShapefiles():
         shp = shapes[k]
         
         # Round the points
-        shp["geometry"] = [MultiPolygon([ft]) if type(ft) == Polygon else ft for ft in shp.geometry]
+        shp = ensureValid(shp)
         newPolys = []
         for f in mapping(shp.geometry)["features"]:
             coords  = json.loads(json.dumps(f["geometry"]["coordinates"]))
@@ -102,7 +122,7 @@ def prepShapefiles():
         # Get the dataframe ready for merging
         shp = shp[shp["DISTRICT"] != "ZZ"]
         shp["DISTRICT"] = shp["DISTRICT"].astype("float64")
-        shp["geometry"] = multify(shp)
+        shp.geometry = ensureValid(shp)
         prepped[k] = shp
         shp.to_file(cgdPath(f"clean_{k}.js", "clean"), driver = "GeoJSON", encoding = "UTF-8")
     
