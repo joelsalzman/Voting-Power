@@ -37,7 +37,9 @@ def now(t = t0):
         hrs  += 1
     sec  = round(rn % 60) if rn > 60 else round(rn)
     if hrs:
-        return f"{hrs}h:{mins}m:{sec}s"
+        tm = f"{hrs}h:{mins}m:{sec}s"
     if mins:
-        return f"{mins}m:{sec}s"
-    return f"{sec}s"
+        tm = f"{mins}m:{sec}s"
+    else:
+        tm = f"{sec}s"
+    return f"{' '*(20 - len(tm))}({tm})"

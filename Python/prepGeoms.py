@@ -13,6 +13,7 @@ from shapely.geometry.multipolygon import MultiPolygon
 import sys
 sys.path.append(r"C:\Users\joelj\OneDrive\Documents\Projects\Voting\Python")
 from useful import *
+from makevalid import make_geom_valid ### From https://github.com/ftwillms/makevalid
 
 
 
@@ -37,49 +38,47 @@ def getOriginal():
 
 
 ### Returns a new MultiPolygon with changed coordinates
-def roundCoords(coords, precision=0, tree=[]):
+def roundCoords(shp, precision=0):
     
-    # Fill empty lists with properly nested tuples
-    newCoords = []
-    for a in range(len(coords)):
-        outer = [[]]
-        for b in range(len(coords[a][0])):
-            inner = []
-            for c in coords[a][0][b]:
-                inner.append(round(c, precision))
-                
-            outer[0].append(tuple(inner))
-        newCoords.append(tuple(outer))
-        outer[0] = tuple(outer[0])
+    # Ensure the geometries are valid
+    shp = ensureValid(shp)
+    newPolys = []
     
-    # Return a new MultiPolygon constructed from the new coordinates
-    return shape(json.loads(json.dumps({"type": "MultiPolygon", "coordinates": newCoords})))
+    # Grab the coordinates
+    for f in mapping(shp.geometry)["features"]:
+        coords  = json.loads(json.dumps(f["geometry"]["coordinates"]))
+    
+        # Fill empty lists with properly nested tuples
+        newCoords = []
+        for a in range(len(coords)):
+            outer = [[]]
+            for b in range(len(coords[a][0])):
+                inner = []
+                for c in coords[a][0][b]:
+                    inner.append(round(c, precision))
+                    
+                outer[0].append(tuple(inner))
+            newCoords.append(tuple(outer))
+            outer[0] = tuple(outer[0])
+        
+        # Create a new MultiPolygon from the new coordinates
+        newShape = shape(json.loads(json.dumps({"type": "MultiPolygon", "coordinates": newCoords})))
+        newPolys.append(newShape)
+    
+    # Return the new geometries
+    shp["geometry"] = newPolys
+    shp = ensureValid(shp)
+    return shp
 
 
 
-### Make invalid geometries valid
-def ensureValid(df, geom_type=MultiPolygon):
+### Make invalid geometries valid instances of the correct type
+def ensureValid(gdf, geom_type=MultiPolygon):
     
-    # See if there are invalid geometries
-    old = len(df)
-    bad = len(df[~df.is_valid])
-    if bad:
-        
-        # Use a zero buffer to fix problematic intersections
-        df.geometry = df.geometry.apply(lambda g: g.buffer(0.0) if not g.is_valid else g)
-        
-        # Remove remaining invalid geometries because I have no idea how to fix them
-        df = df.loc[df.is_valid & ~df.is_empty]
-        
-        # Print how many geometries were changed
-        dropped = f", dropped {str(old - len(df))}" if old != len(df) else ""
-        print(f"        Fixed {bad} invalid polygon(s)", end = f"{dropped}\n")
-        
-        
-    # Ensure that every geometry is a MultiPolygon
-    df.geometry = df.geometry.apply(lambda g: geom_type([g]) if type(g) != geom_type else g)
-    
-    return df
+    gdf.geometry = gdf.geometry.apply(lambda g: make_geom_valid(g))
+    gdf = gdf[~gdf.is_empty]
+    gdf.geometry = gdf.geometry.apply(lambda g: geom_type([g]) if type(g) != geom_type else g)
+    return gdf
 
 
 
@@ -98,14 +97,7 @@ def prepShapefiles():
         shp = shapes[k]
         
         # Round the points
-        shp = ensureValid(shp)
-        newPolys = []
-        for f in mapping(shp.geometry)["features"]:
-            coords  = json.loads(json.dumps(f["geometry"]["coordinates"]))
-            rounded = roundCoords(coords, precision = 5)
-            newPolys.append(rounded)
-        shp["geometry"] = newPolys
-        shp = shp[shp.is_valid]
+        shp = roundCoords(shp, precision = 5)
         
         # Make sure the file has the correct fields
         if "STATE" not in shp.columns:

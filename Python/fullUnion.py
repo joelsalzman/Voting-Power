@@ -9,9 +9,8 @@ Created on Thu Nov 21 12:06:41 2019
 
 # Imports
 import geopandas as gpd
-import os, time, sys, json
+import os, time, sys
 from shapely.ops import snap, unary_union
-from shapely.geometry import mapping, LineString
 sys.path.append(r"C:\Users\joelj\OneDrive\Documents\Projects\Voting\Python")
 from useful import *
 from prepGeoms import *
@@ -44,6 +43,9 @@ def getClean():
 
 ### Eliminates sliver polygons
 def eliminateSlivers(gdf, sliver_size):
+    
+    # Make sure that all the geometries are valid
+    gdf = ensureValid(gdf)
     
     # Determine which polygons count as slivers
     eliminate = gdf[gdf.geometry.area < sliver_size]
@@ -81,40 +83,10 @@ def eliminateSlivers(gdf, sliver_size):
         both = gpd.overlay(sliver, gpd.GeoDataFrame([biggest]), "union")
         biggest["geometry"] = [both.geometry.unary_union]
     
-    print(f"      Found {len(eliminate)} sliver(s), {ignored} ignored")
+    if len(eliminate):
+        print(f"      Found {len(eliminate)} sliver(s), {ignored} ignored")
     gdf.reset_index(drop = True, inplace = True)
     return gdf
-
-
-
-### Returns a unary union of the geometries in a GeoDataFrame
-def flatten(gdf):
-    
-    # Try performing a unary union
-    try:
-        flat = unary_union(gdf)
-        
-    except:
-        
-        # Try performing a unary union with buffers
-        try:
-            flat = unary_union(gdf.buffer(0.00001).buffer(-0.00001))
-            
-        # Break the MultiPolygons down into LineStrings and do the unary union on those
-        except:
-            print("      Decomposing geometries...")
-            lines = []
-            for f in mapping(ensureValid(gdf).geometry)["features"]:
-                 coords = json.loads(json.dumps(f["geometry"]["coordinates"]))
-                 cpairs = []
-                 for a in range(len(coords)):
-                     for b in range(len(coords[a][0])):
-                         cpairs.append(tuple(coords[a][0][b]))
-                 lines.append(LineString(cpairs))
-            flat = unary_union(lines)
-        
-    # Return the result
-    return flat
 
 
 
@@ -129,48 +101,19 @@ def stackUnion(add, stack, thing, sliver_size=0.001):
     
     # Ensure the geometries are all valid
     add   = ensureValid(add)
-    stack = ensureValid(stack)
+    stack = roundCoords(stack, 5)
     
-    try:     
-
-        # Snap the add layer to the stack
-        flat = flatten(stack)
-        add.geometry   = [snap(g, flat, 0.0001) for g in add.geometry]
-        stack.geometry = [snap(g, flat, 0.0001) for g in stack.geometry]
-        print(f"        Snapped geometries ({now()})")
-        
-        # Ensure the geometries are still valid
-        add   = ensureValid(add)
-        stack = ensureValid(stack)
+    try:
         
         # Union the new layer to the overlay
-        try:
-            stack = gpd.overlay(add, stack, "union")
+        stack = gpd.overlay(add, stack, "union")
+        print(f"      Union performed {now()}")
         
-        # Buffer the add layer's geometries and try again
-        except:
-            print(f"        Union failed, snapping to add layer...")
-            add   = ensureValid(add)
-            stack = ensureValid(stack)
-            flat = flatten(add)
-            add.geometry   = [snap(g, flat, 0.0001) for g in add.geometry]
-            stack.geometry = [snap(g, flat, 0.0001) for g in stack.geometry]
-            print(f"        Snapped geometries ({now()})")
-            add   = ensureValid(add)
-            stack = ensureValid(stack)
-            
-            stack = gpd.overlay(add, stack, "union")
-                    
-        print(f"      Union performed      ({now()})")
-        
-        # Eliminate problematic polygons
-        size  = len(stack)
-        stack = stack.dropna()
-        print(f"      Dropped {size - len(stack)} nulls")
+        # Round the coordinates
         stack = eliminateSlivers(stack, sliver_size)
+        stack = roundCoords(stack, 5)
+        print(f"    Added  {thing}       {now()}")
             
-        print(f"    Added  {thing} ({now()})")
-        
     except Exception as e:
         failures.append(thing)
         print(e)
@@ -233,7 +176,7 @@ def stateUnion(st, cgds={}, reverse=False):
     for k in keys[1:]:
         
         # Union the geometries
-        stack = stackUnion(uniqueGeoms[k], full, k)
+        stack = stackUnion(uniqueGeoms[k], full, k, 0)
         
         # Store relevant information
         if len(stack[1]):
@@ -330,15 +273,17 @@ def allStates(cgds={}, reverse=False, start_at=None):
 
 
 ### Merges the overlaid states into one file
-def fullUnion(lyrs):
+def fullUnion():
+    
+    lyrs = getClean()
             
     # Find the smallest polygon in all the states to define how large slivers can be
-    sliverMax  = min([float(p.area) for p in [g for g in [df.geometry for df in lyrs]]]) - 0.00001
+    sliverMax  = min([float(p.area) for p in [g for g in [gdf.geometry for gdf in lyrs]]]) - 0.00001
     
-    # Join all the merged states together
+    # Join all layers together
     full = list(lyrs.values())[0]
-    for st in list(lyrs.keys())[1:]:
-        full = stackUnion(lyrs[st], full, st, sliverMax)[0]
+    for yr in list(lyrs.keys())[1:]:
+        full = stackUnion(lyrs[yr], full, yr, sliverMax)[0]
         
     # Output
     full.to_file(cgdPath("CGD_UNION.js", ""), driver = "GeoJSON", encoding = "UTF-8")
@@ -346,4 +291,4 @@ def fullUnion(lyrs):
     
     
 
-allStates(reverse=True, start_at="New Mexico")
+fullUnion()
