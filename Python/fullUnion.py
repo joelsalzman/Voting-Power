@@ -102,7 +102,7 @@ def flatten(gdf):
             
         # Break the MultiPolygons down into LineStrings and do the unary union on those
         except:
-            print("      Rebuilding geometries...")
+            print("      Decomposing geometries...")
             lines = []
             for f in mapping(ensureValid(gdf).geometry)["features"]:
                  coords = json.loads(json.dumps(f["geometry"]["coordinates"]))
@@ -159,33 +159,7 @@ def stackUnion(add, stack, thing, sliver_size=0.001):
             add   = ensureValid(add)
             stack = ensureValid(stack)
             
-            try:
-                stack = gpd.overlay(add, stack, "union")
-                
-            # Try iteratively increasing the snapping tolerance
-            except:
-                print("        Union failed, raising snap tolerance...")
-                tol = 0.0002
-                
-                # Create a unary union of the LineStrings in the stack
-                flat = flatten(stack)
-                
-                # Increase the snapping tolerance and try again
-                while tol <= 0.001:
-                    try:
-                        print(f"      Tolerance to {tol}   ({now()})")
-                        add   = ensureValid(add)
-                        stack = ensureValid(stack)
-                        add.geometry   = [snap(g, flat, tol) for g in add.geometry]
-                        stack.geometry = [snap(g, flat, tol) for g in stack.geometry]
-                        print(f"        Snapped geometries  ({now()})")
-                        stack = gpd.overlay(ensureValid(add), ensureValid(stack), "union")
-                        break
-                    except:
-                        tol = round(tol + 0.0002, 4)
-                
-                if tol > 0.001:
-                    raise UnboundLocalError("")
+            stack = gpd.overlay(add, stack, "union")
                     
         print(f"      Union performed      ({now()})")
         
@@ -253,9 +227,9 @@ def stateUnion(st, cgds={}, reverse=False):
             uniqueGeoms[files[i][0]] = files[i][1]
     
     # Union the rest of the geometries
-    keys = list(uniqueGeoms.keys()) if not reverse else reversed(list(uniqueGeoms.keys()))
+    keys = list(uniqueGeoms.keys()) if not reverse else list(reversed(list(uniqueGeoms.keys())))
     full = uniqueGeoms[keys[0]]
-    print(f"  Beginning Stack Union...\n    Added {list(uniqueGeoms.keys())[0]}")
+    print(f"  Beginning Stack Union...\n    Added {keys[0]}")
     for k in keys[1:]:
         
         # Union the geometries
@@ -300,7 +274,7 @@ def allStates(cgds={}, reverse=False, start_at=None):
     
     # Do a simple attribute join on states with only one district
     simple = orderedStates[orderedStates["E_1990"] == 3]["State"].tolist()
-    if not start_at or start_at not in simple:
+    if not start_at or start_at in simple:
         for st in simple:
             tst = time.time()
             soFar += 1
@@ -335,6 +309,7 @@ def allStates(cgds={}, reverse=False, start_at=None):
             if st != start_at:
                 continue
             else:
+                soFar += len(simple)
                 foundStart = True
         print(f"\n\nState {soFar}/{len(simple) + len(stateList)}")
         
@@ -368,7 +343,7 @@ def fullUnion(lyrs):
     # Output
     full.to_file(cgdPath("CGD_UNION.js", ""), driver = "GeoJSON", encoding = "UTF-8")
     print(f"Union complete")
+    
+    
 
-
-
-allStates()
+allStates(reverse=True, start_at="New Mexico")

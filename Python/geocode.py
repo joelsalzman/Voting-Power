@@ -9,11 +9,10 @@ Created on Tue Nov 19 11:55:10 2019
 
 # Imports
 import pandas as pd
-import os
 from shapely.geometry.polygon import Polygon
 from shapely.geometry.multipolygon import MultiPolygon
 import sys
-sys.path.append(os.path.join(os.getcwd(), "Python"))
+sys.path.append(r"C:\Users\joelj\OneDrive\Documents\Projects\Voting\Python")
 from useful import *
 from fullUnion import prepShapefiles
     

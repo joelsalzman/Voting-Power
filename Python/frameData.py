@@ -9,9 +9,22 @@ Author: Joel Salzman
 
 # Imports
 import pandas as pd
-import os, sys
-sys.path.append(os.path.join(os.getcwd(), "Python"))
-from useful import *
+import os
+
+# Set working directory
+if "Voting" not in os.getcwd():
+    os.chdir(r"C:\Users\joelj\OneDrive\Documents\Projects\Voting")
+elif "Python" in os.getcwd():
+    os.chdir("..")
+# Path getters
+tbl = lambda file: os.path.join(os.getcwd(), "Tables", file)
+# Useful lists and dataframes
+years = [y for y in range(1999, 2020)]
+states = pd.read_csv(tbl("states.csv"))
+keepFromCSV = ["year", "state", "district",
+               "writein", "special", "runoff", "candidate", "party", "candidatevotes", "totalvotes"]
+newCols = ["runnerUp", "ruParty", "ruVotes", "rawMargin", "decMargin", "winner", "winVotes", "totalVotes"]
+
 
 ### Calculates the margins and puts data for each election into a new dataframe
 def processData():
