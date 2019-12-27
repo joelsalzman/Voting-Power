@@ -28,18 +28,18 @@ newCols = ["runnerUp", "ruParty", "ruVotes", "rawMargin", "decMargin", "winner",
 
 ### Record times
 t0 = time.time()
-def now(t = t0):
+def now(t = t0, parens = True):
     rn   = time.time() - t
     hrs  = 0
     mins = math.floor(rn / 60)
     while (mins >= 60):
         mins -= 60
         hrs  += 1
-    sec  = round(rn % 60) if rn > 60 else round(rn)
+    sec  = round(rn % 60) if rn >= 60 else round(rn)
     if hrs:
         tm = f"{hrs}h:{mins}m:{sec}s"
     if mins:
         tm = f"{mins}m:{sec}s"
     else:
         tm = f"{sec}s"
-    return f"{' '*(20 - len(tm))}({tm})"
+    return f"{' '*(19 - len(tm))}({tm})" if parens else f"{' '*(19 - len(tm))}[{tm}]"

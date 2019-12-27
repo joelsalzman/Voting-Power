@@ -7,10 +7,10 @@ Created on Tue Dec  3 13:54:06 2019
 
 # Imports
 import geopandas as gpd
-import os, json, shapely
+import os, sys, json
 from shapely.geometry import shape, mapping
+from shapely.wkt import dumps, loads
 from shapely.geometry.multipolygon import MultiPolygon
-import sys
 sys.path.append(r"C:\Users\joelj\OneDrive\Documents\Projects\Voting\Python")
 from useful import *
 from makevalid import make_geom_valid ### From https://github.com/ftwillms/makevalid
@@ -34,15 +34,15 @@ def getOriginal():
             cgd[rename(file)] = shp
     
     return cgd
-  
 
 
-### Returns a new MultiPolygon with changed coordinates
+
+### Rounds coordinates
 def roundCoords(shp, precision=0):
     
-    # Ensure the geometries are valid
-    shp = ensureValid(shp)
+    # Prepare an empty list for the rounded coordinates
     newPolys = []
+    shp.geometry = shp.geometry.apply(lambda g: MultiPolygon([g]) if type(g) != MultiPolygon else g)
     
     # Grab the coordinates
     for f in mapping(shp.geometry)["features"]:
@@ -67,7 +67,6 @@ def roundCoords(shp, precision=0):
     
     # Return the new geometries
     shp["geometry"] = newPolys
-    shp = ensureValid(shp)
     return shp
 
 
@@ -75,8 +74,8 @@ def roundCoords(shp, precision=0):
 ### Make invalid geometries valid instances of the correct type
 def ensureValid(gdf, geom_type=MultiPolygon):
     
+    gdf = gdf[~gdf.geometry.isna()]
     gdf.geometry = gdf.geometry.apply(lambda g: make_geom_valid(g))
-    gdf = gdf[~gdf.is_empty]
     gdf.geometry = gdf.geometry.apply(lambda g: geom_type([g]) if type(g) != geom_type else g)
     return gdf
 
@@ -96,9 +95,6 @@ def prepShapefiles():
         # Grab the file
         shp = shapes[k]
         
-        # Round the points
-        shp = roundCoords(shp, precision = 5)
-        
         # Make sure the file has the correct fields
         if "STATE" not in shp.columns:
             shp["STATE"] = [states.loc[states["FP"] == float(fp), "State"].values[0] for fp in shp["STATEFP"]]
@@ -111,10 +107,13 @@ def prepShapefiles():
         shp = shp.dissolve(by = ["STATE", "DISTRICT"])
         shp.reset_index(inplace = True)
         
+        # Make sure the geometries are valid
+        shp = ensureValid(shp)
+        shp = roundCoords(shp, 5)
+        
         # Get the dataframe ready for merging
         shp = shp[shp["DISTRICT"] != "ZZ"]
         shp["DISTRICT"] = shp["DISTRICT"].astype("float64")
-        shp.geometry = ensureValid(shp)
         prepped[k] = shp
         shp.to_file(cgdPath(f"clean_{k}.js", "clean"), driver = "GeoJSON", encoding = "UTF-8")
     

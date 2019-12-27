@@ -10,7 +10,8 @@ Created on Thu Nov 21 12:06:41 2019
 # Imports
 import geopandas as gpd
 import os, time, sys
-from shapely.ops import snap, unary_union
+from shapely.wkt import dumps, loads
+from shapely.ops import unary_union
 sys.path.append(r"C:\Users\joelj\OneDrive\Documents\Projects\Voting\Python")
 from useful import *
 from prepGeoms import *
@@ -20,20 +21,27 @@ warnings.filterwarnings(action = "ignore")
 
 
 ### Grabs prepped shapefiles
-def getClean():
+def getFiles(folder, getAll=True):
     
     # Fill a dictionary with the cgds
     cgds = {}
-    for file in os.listdir(cgdPath("", "clean")):
+    for file in os.listdir(cgdPath("", folder)):
         if "." not in file:
             continue
-        df = gpd.read_file(cgdPath(file, "clean"), driver = "GeoJSON", encoding = "UTF-8")
+        df = gpd.read_file(cgdPath(file, folder), driver = "GeoJSON", encoding = "UTF-8")
         
         # Change the name of the key
-        cgds[int(file.replace("clean_","").replace(".js",""))] = df
+        key = file.replace("clean_","").replace(".js","")
+        try:
+            cgds[int(key)] = df
+        except:
+            cgds[key] = df
         print(f"Loaded {list(cgds.keys())[-1]}")
+        
+        if not getAll and len(cgds):
+            break
     
-    # If the clean cgds aren't accessible, generate them
+    # If the cgds aren't accessible, generate them
     if len(cgds) == 0:
         cgds = prepShapefiles()
         
@@ -41,59 +49,8 @@ def getClean():
 
 
 
-### Eliminates sliver polygons
-def eliminateSlivers(gdf, sliver_size):
-    
-    # Make sure that all the geometries are valid
-    gdf = ensureValid(gdf)
-    
-    # Determine which polygons count as slivers
-    eliminate = gdf[gdf.geometry.area < sliver_size]
-    ignored = 0
-    
-    for row in eliminate.itertuples():
-        
-        # Copy the sliver to a new GeoDataFrame
-        sliver = gpd.GeoDataFrame([row])
-        
-        # Subset the adjacent polygons
-        closeby = gdf[gdf.geometry.intersects(sliver) | gdf.geometry.touches(sliver)]
-        
-        # If there are no adjacent polygons, buffer the sliver and search again
-        if not len(closeby):
-            bigSliv = sliver
-            bigSliv.geometry = [bigSliv.geometry[0].buffer(0.1)]
-            closeby = gdf[gdf.geometry.intersects(bigSliv) | gdf.geometry.touches(bigSliv)]
-            
-            # Ignore slivers with no neighbors
-            if not len(closeby):
-                ignored += 1
-                continue
-        
-        # Select the biggest adjacent polygon
-        biggest = closeby.loc[closeby.geometry.area.idxmax()]
-            
-        # Remove all columns from the sliver except for geometry
-        cols = list(sliver.columns)
-        cols.remove("geometry")
-        sliver = sliver.drop(columns = cols)
-        
-        # Merge the sliver with the biggest adjacent polygon
-        sliver.crs = biggest.crs = {"init": "epsg:4326"}
-        both = gpd.overlay(sliver, gpd.GeoDataFrame([biggest]), "union")
-        biggest["geometry"] = [both.geometry.unary_union]
-    
-    if len(eliminate):
-        print(f"      Found {len(eliminate)} sliver(s), {ignored} ignored")
-    gdf.reset_index(drop = True, inplace = True)
-    return gdf
-
-
-
 ### Union lots of geometries by stacking them
 def stackUnion(add, stack, thing, sliver_size=0.001):
-    
-    print(f"    Adding {thing}...")
     
     # Prepare to fail
     failures = []
@@ -101,18 +58,22 @@ def stackUnion(add, stack, thing, sliver_size=0.001):
     
     # Ensure the geometries are all valid
     add   = ensureValid(add)
-    stack = roundCoords(stack, 5)
+    stack = ensureValid(stack)
     
+    # Union the new layer to the overlay
     try:
-        
-        # Union the new layer to the overlay
-        stack = gpd.overlay(add, stack, "union")
-        print(f"      Union performed {now()}")
-        
+        try:
+            stack = gpd.overlay(add, stack, "union")
+        except:
+            stack = roundCoords(stack, 5)
+            try:
+                stack = gpd.overlay(add, stack, "union")
+            except:
+                stack = gpd.overlay(add, ensureValid(stack), "union")
+            
         # Round the coordinates
-        stack = eliminateSlivers(stack, sliver_size)
         stack = roundCoords(stack, 5)
-        print(f"    Added  {thing}       {now()}")
+        print(f"    Added {thing}{' '*(21-len(thing))}{now()}")
             
     except Exception as e:
         failures.append(thing)
@@ -127,19 +88,19 @@ def stackUnion(add, stack, thing, sliver_size=0.001):
  
         
 ### Overlays all the congressional districts over time into a single layer for each state
-def stateUnion(st, cgds={}, reverse=False):
+def stateUnion(st, cgds={}, out=True, reverse=False, stop=None):
     
     # Prepare to union everything
-    cgdKeys = list(cgds.keys())
     if not len(cgds):
-        cgds = getClean()
+        cgds = getFiles("clean")
+    cgdKeys = list(cgds.keys())
     tst = time.time()
     
     # Create empty dictionaries to store information for the logs
     failures  = {st:[]}
     additions = {st:[]}
     
-    print(f"Unioning {st} at {now()}")
+    print(f"Unioning {st}{' '*(21 - len(st))} {now()}")
     
     # Isolate and prepare the files
     files = []
@@ -173,25 +134,31 @@ def stateUnion(st, cgds={}, reverse=False):
     keys = list(uniqueGeoms.keys()) if not reverse else list(reversed(list(uniqueGeoms.keys())))
     full = uniqueGeoms[keys[0]]
     print(f"  Beginning Stack Union...\n    Added {keys[0]}")
-    for k in keys[1:]:
-        
-        # Union the geometries
-        stack = stackUnion(uniqueGeoms[k], full, k, 0)
-        
-        # Store relevant information
-        if len(stack[1]):
-            failures[st].append(stack[1])
-        prev = len(full)
-        full = stack[0]
-        diff = len(full) - prev
-        if diff:
-            print(f"      {diff} new polygon(s), total now {len(full)}")
-            additions[st].append(f"{k} {diff}")
+    if not stop or str(stop) not in keys[0]:
+        for k in keys[1:]:
+            
+            # Union the geometries
+            stack = stackUnion(uniqueGeoms[k], full, k, 0)
+            
+            # Store relevant information
+            if len(stack[1]):
+                failures[st].append(stack[1])
+            prev = len(full)
+            full = stack[0]
+            diff = len(full) - prev
+            if diff:
+                print(f"      {diff} new polygon(s), total now {len(full)}")
+                additions[st].append(f"{k} {diff}")
+            
+            # Stop if requested
+            if stop and str(stop) in k:
+                break
                 
     # Output the union
     full = ensureValid(full)
-    full.to_file(cgdPath(f"{st}.js", "by_state"), driver = "GeoJSON", encoding = "UTF-8")
-    print(f"{st} completed in {now(tst)}")
+    if out:
+        full.to_file(cgdPath(f"{st}.js", "by_state"), driver = "GeoJSON", encoding = "UTF-8")
+    print(f"Completed {st}{' '*(20 - len(st))} {now(tst, False)}")
     return full, failures, additions
     
 
@@ -203,7 +170,7 @@ def allStates(cgds={}, reverse=False, start_at=None):
     lyrs = []
         
     # Get the files if necessary
-    clean = getClean() if not len(cgds) else cgds
+    clean = getFiles("clean") if not len(cgds) else cgds
     
     # Clear the logs
     if not start_at:
@@ -222,7 +189,7 @@ def allStates(cgds={}, reverse=False, start_at=None):
             tst = time.time()
             soFar += 1
             print(f"\n{soFar}/51")
-            print(f"Unioning {st} at {now()}")
+            print(f"Unioning {st}{' '*(21 - len(st))} {now()}")
             
             # Isolate the state in the first year to use as a base
             yr = list(clean.keys())[0]
@@ -239,7 +206,7 @@ def allStates(cgds={}, reverse=False, start_at=None):
             # Output the merged file
             lyrs.append(base)
             base.to_file(cgdPath(f"{st}.js", "by_state"), driver = "GeoJSON", encoding = "UTF-8")
-            print(f"{st} completed in {now(tst)}")
+            print(f"Completed {st}{' '*(20 - len(st))} {now(tst)}")
             
     # Union the rest of the states' congressional districts
     stateList  = orderedStates[orderedStates["E_1990"] > 3]["State"].tolist()
@@ -273,22 +240,63 @@ def allStates(cgds={}, reverse=False, start_at=None):
 
 
 ### Merges the overlaid states into one file
-def fullUnion():
+def fullUnion(lyrs={}):
     
-    lyrs = getClean()
-            
-    # Find the smallest polygon in all the states to define how large slivers can be
-    sliverMax  = min([float(p.area) for p in [g for g in [gdf.geometry for gdf in lyrs]]]) - 0.00001
+    failures = []
     
+    # Get the files
+    if not lyrs:
+        lyrs = getFiles("by_state") if by_state else getFiles("clean")
+    
+    # Set up the base
+    base = list(getFiles("clean", False).values())[0].drop(columns = ["DISTRICT"])
+    base = ensureValid(roundCoords(base.dissolve(by = "STATE").reset_index(), 5))
+    full = []
+    print("Created base")
+        
     # Join all layers together
-    full = list(lyrs.values())[0]
-    for yr in list(lyrs.keys())[1:]:
-        full = stackUnion(lyrs[yr], full, yr, sliverMax)[0]
+    for k in list(lyrs.keys()):
+        gdf = lyrs[k]
+        
+        bs = base.loc[base["STATE"] == k]
+        bs.geometry = [unary_union(bs.geometry)]
+        gdf = gdf.drop(columns = "STATE")
+        
+        try:
+            clip = gpd.overlay(ensureValid(gdf), bs, "intersection")
+        except:
+            try:
+                rnd  = roundCoords(ensureValid(gdf), 5)
+                clip = gpd.overlay(ensureValid(rnd), ensureValid(bs), "intersection")
+            except:
+                print(f"--- FAILED ON {k} ---")
+                failures.append(k)
+                continue
+        
+        full = clip if not len(full) else full.append(clip)
+        
+        print(f"    Added {k}{' '*(20 - len(k))} {now()}")
         
     # Output
+    full = ensureValid(full)
     full.to_file(cgdPath("CGD_UNION.js", ""), driver = "GeoJSON", encoding = "UTF-8")
     print(f"Union complete")
+    if len(failures):
+        print(failures)
     
     
 
-fullUnion()
+### Replaces a state's data in the full union
+def updateFull(state, file=""):
+    
+    # Get the files
+    full = gpd.read_file(cgdPath("CGD_UNION.js", ""), driver = "GeoJSON", encoding = "UTF-8")
+    if not len(file):
+        file = gpd.read_file(cgdPath(f"{state}.js", "by_state"), driver = "GeoJSON", encoding = "UTF-8")
+    
+    # Replace any existing rows with the state for the new file
+    full = full.loc[full["STATE"] != state].append(file)
+    print(f"Updated {state}")
+    
+    # Return the updated file
+    full.to_file(cgdPath("CGD_UNION.js", ""), driver = "GeoJSON", encoding = "UTF-8")
