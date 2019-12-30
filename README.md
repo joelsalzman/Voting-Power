@@ -2,7 +2,7 @@
 This project looks at where votes have mattered most in US federal elections since 1999. In this repository, you'll find all the code involved in the analysis, most of the data, and some of the results.
 
 ## How to answer the question
-How do we tell where votes matter most from a geographic perspective? By looking at where the margins have been closest in various elections. For instance, an election with a margin of 0 -- a tie -- is where a vote matters the most. So in order to figure out where votes matter most, we need to answer the following question:
+How do we tell where votes matter most from a geographic perspective? By looking at where the margins have been closest in various elections. For instance, an election with a margin of 0 — a tie — is where a vote matters the most. So in order to figure out where votes matter most, we need to answer the following question:
 
 1) Where have elections been the closest?
 2) Which elections took place where?
@@ -31,7 +31,7 @@ Since each seat in Congress has the same power (geographically speaking), House 
 5) Calculate utility values
 6) Publish results
 
-## The Results
+## Results
 There are eight sets of results to look at. I'll include a small discussion here about a few interesting results and hopefully soon have the interactive map up so that anyone who finds this page can explore the data themselves. For now, hang tight.
 
 ## Credits
