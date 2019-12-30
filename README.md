@@ -22,11 +22,10 @@ The final combined utility values represent how much votes mattered in that plac
 3) Overlay maps of the congressional districts drawn between 1999 and 2019
 4) Merge the voting data with the geodata
 5) Calculate utility values
-
-In order to compare one region of land to another, the margins have to be normalized. First we take the average margin for each type of election from 1999 to 2019. Then we normalize it according to the worst recorded margin for that type of election. What comes out is a value between 0 and 1, where 1 means that the election was a tie (so your vote matters immensely) and 0 means that the election had the greatest possible margin (so your vote mattered as little as possible).
+6) Publish results
 
 ## The Results
-There are eight sets of results to look at. I'll include a small discussion here about a few interesting results and hopefully soon have the interactive map up so that anyone who finds this page can explore the data themselves.
+There are eight sets of results to look at. I'll include a small discussion here about a few interesting results and hopefully soon have the interactive map up so that anyone who finds this page can explore the data themselves. For now, hang tight.
 
 ## Credits
 The first incarnation of this project was done in Spring 2019 as part of GEOG 176C at UCSB as a group project between Juan Miranda, Owen Karlenzig, and myself. The shapefiles were supplied by the STKO Lab at UCSB, led by Krysztof Janowicz (who was also the instructor for that class).
