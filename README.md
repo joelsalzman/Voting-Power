@@ -35,7 +35,7 @@ Since each seat in Congress has the same power (geographically speaking), House 
 There are eight sets of results to look at. I'll include a small discussion here about a few interesting results and hopefully soon have the interactive map up so that anyone who finds this page can explore the data themselves. For now, hang tight.
 
 ## Credits
-The first incarnation of this project was done in Spring 2019 as part of GEOG 176C at UCSB as a group project between Juan Miranda, Owen Karlenzig, and myself. The shapefiles were supplied by the STKO Lab at UCSB, led by Krysztof Janowicz (who was also the instructor for that class).
+The first incarnation of this project was done in Spring 2019 as part of GEOG 176C at UCSB as a group project between Juan Miranda, Owen Karlenzig, and myself. The shapefiles were supplied by the STKO Lab at UCSB, led by Krysztof Janowicz (who was also the instructor for that class). I used a number of open source Python libraries (especially geopandas), including a shapely version of ST_MakeValid created by ftwillms. [https://github.com/ftwillms/makevalid]
 
 The project you see here was done entirely by myself, save for two shapefiles (CGDs 115 and 116) provided by the STKO Lab. The voting data come from the MIT Election Lab and the other CGD shapefiles come directly from USGS.
 
