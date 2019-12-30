@@ -2,7 +2,7 @@
 This project looks at where votes have mattered most in US federal elections since 1999. In this repository, you'll find all the code involved in the analysis, most of the data, and some of the results.
 
 ## How to answer the question
-How do we tell where votes matter most from a geographic perspective? By looking at where the margins have been closest in various elections. For instance, an election with a margin of 0 – a tie – is where a vote matters the most. So in order to figure out where votes matter most, we need to answer the following question:
+How do we tell where votes matter most from a geographic perspective? By looking at where the margins have been closest in various elections. For instance, an election with a margin of 0 (a tie) is where a vote matters the most. So in order to figure out where votes matter most, we need to answer the following question:
 
 1) Where have elections been the closest?
 2) Which elections took place where?
