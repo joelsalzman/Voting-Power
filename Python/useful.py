@@ -30,8 +30,8 @@ newCols = ["runnerUp", "ruParty", "ruVotes", "rawMargin", "decMargin", "winner",
 t0 = time.time()
 def now(t = t0, parens = True):
     rn   = time.time() - t
-    hrs  = 0
     mins = math.floor(rn / 60)
+    hrs  = 0
     while (mins >= 60):
         mins -= 60
         hrs  += 1

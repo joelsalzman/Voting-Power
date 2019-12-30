@@ -9,6 +9,7 @@ Created on Thu Nov 21 12:06:41 2019
 
 # Imports
 import geopandas as gpd
+import numpy as np
 import os, time, sys
 from shapely.wkt import dumps, loads
 from shapely.ops import unary_union
@@ -69,7 +70,8 @@ def stackUnion(add, stack, thing, sliver_size=0.001):
             try:
                 stack = gpd.overlay(add, stack, "union")
             except:
-                stack = gpd.overlay(add, ensureValid(stack), "union")
+                add   = roundCoords(add, 5)
+                stack = gpd.overlay(ensureValid(add), ensureValid(stack), "union")
             
         # Round the coordinates
         stack = roundCoords(stack, 5)
@@ -84,6 +86,40 @@ def stackUnion(add, stack, thing, sliver_size=0.001):
     # Return the new union
     stack = ensureValid(stack)
     return stack, failures
+
+
+
+### Makes sure fields stay full
+def fillFields(row):
+    
+    # Make sure not to loop forever
+    iterations = 0
+    
+    # Only act if there are null values in the row
+    while len(row) != len(row.dropna()):
+        
+        # Set the numerical index
+        idx = 0
+        
+        # Check the columns
+        for col, val in row.items():
+            if "DIS" in str(col) and np.isnan(val):
+                
+                # First try to set the value to the previous column's
+                if idx > 0 and not np.isnan(row.iloc[idx-1]):
+                    row.iloc[idx] = row.iloc[idx-1]
+                    
+                # If the previous column is empty, try setting the value to the next column's
+                elif not np.isnan(row.iloc[idx+1]):
+                    row.iloc[idx] = row.iloc[idx+1]
+                    
+            idx += 1
+            
+        iterations += 1
+        if iterations == len(row):
+            break
+    
+    return row
 
  
         
@@ -150,16 +186,37 @@ def stateUnion(st, cgds={}, out=True, reverse=False, stop=None):
                 print(f"      {diff} new polygon(s), total now {len(full)}")
                 additions[st].append(f"{k} {diff}")
             
+            # Make sure the fields are in the right order and are full
+            full = full[sorted(full.columns)].apply(lambda r: fillFields(r))
+            
             # Stop if requested
             if stop and str(stop) in k:
                 break
                 
     # Output the union
     full = ensureValid(full)
+    full["STATE"] = st
     if out:
         full.to_file(cgdPath(f"{st}.js", "by_state"), driver = "GeoJSON", encoding = "UTF-8")
     print(f"Completed {st}{' '*(20 - len(st))} {now(tst, False)}")
     return full, failures, additions
+
+
+
+### Does the state in separate halves
+def halfState(st, cgds={}):
+    
+    if not len(cgds):
+        cgds = getFiles("clean")
+    print(f"Attempting halfState on {st}")
+        
+    first  = stateUnion(st, cgds, False, False, 2009)[0]
+    second = stateUnion(st, cgds, False, True,  2011)[0]
+    both   = stackUnion(first, second, f"{st} Both")
+    bothFx = both[0][sorted(both[0].columns)].apply(lambda r: fillFields(r))
+    bothFx.to_file(cgdPath(f"{st}.js", "by_state"), driver = "GeoJSON", encoding = "UTF-8")
+    
+    return bothFx, {st:[]}
     
 
 
@@ -206,7 +263,7 @@ def allStates(cgds={}, reverse=False, start_at=None):
             # Output the merged file
             lyrs.append(base)
             base.to_file(cgdPath(f"{st}.js", "by_state"), driver = "GeoJSON", encoding = "UTF-8")
-            print(f"Completed {st}{' '*(20 - len(st))} {now(tst)}")
+            print(f"Completed {st}{' '*(20 - len(st))} {now(tst, False)}")
             
     # Union the rest of the states' congressional districts
     stateList  = orderedStates[orderedStates["E_1990"] > 3]["State"].tolist()
@@ -225,7 +282,13 @@ def allStates(cgds={}, reverse=False, start_at=None):
         
         # Perform the union
         union = stateUnion(st, clean, reverse)
-        lyrs.append(union[0]) 
+        lyrs.append(union[0])
+        
+        if len(union[1][st]):
+            del union
+            union = halfState(st, clean)
+        
+        union = union.apply(lambda r: fillFields(r))
         
         # Print the information about the state union to text files
         for i in range(1, len(union)):
@@ -245,8 +308,8 @@ def fullUnion(lyrs={}):
     failures = []
     
     # Get the files
-    if not lyrs:
-        lyrs = getFiles("by_state") if by_state else getFiles("clean")
+    if not len(lyrs):
+        lyrs = getFiles("by_state")
     
     # Set up the base
     base = list(getFiles("clean", False).values())[0].drop(columns = ["DISTRICT"])
@@ -260,7 +323,6 @@ def fullUnion(lyrs={}):
         
         bs = base.loc[base["STATE"] == k]
         bs.geometry = [unary_union(bs.geometry)]
-        gdf = gdf.drop(columns = "STATE")
         
         try:
             clip = gpd.overlay(ensureValid(gdf), bs, "intersection")

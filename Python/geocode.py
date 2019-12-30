@@ -14,7 +14,7 @@ import sys
 sys.path.append(r"C:\Users\joelj\OneDrive\Documents\Projects\Voting\Python")
 from useful import *
 from prepGeoms import prepShapefiles, ensureValid
-from fullUnion import getFiles, stackUnion
+from fullUnion import getFiles, stackUnion, fillFields
     
 
 
@@ -89,37 +89,42 @@ def addByYear(yr):
 
 
 ### Adds margin data to the unioned GeoDataFrame
-def geocode(gdf="", rtrn=False):
+def geocode(gdf=""):
     
     # Grab the data
     if not len(gdf):
         gdf = gpd.read_file(cgdPath("CGD_UNION.js", ""), driver = "GeoJSON", encoding = "UTF-8")
+    merged = gdf.copy()
     allData = getVotingData()
     print(f"    Loaded data               {now()}")
     
     # Make sure the columns are all the same type
-    for df in (gdf, allData):
+    for df in (merged, allData):
         for c in df.columns:
             df[c] = df[c].astype("object")
     
     # Merge the data by year
     for yr, df in allData.groupby("year"):
+        
+        # Rename the columns
         dist = f"DIS_{int(yr)-1}"
-        data = df.copy().rename(columns = {"district": dist}).drop(columns = "year")
-        data.columns = [f"{c}_{yr}" if c not in ("state", dist) else c for c in data.columns]
-        data = data.drop_duplicates().rename(columns = {"state": "STATE"})
-        gdf = gdf.merge(data, how = "inner", left_on = ["STATE", dist], right_on = ["STATE", dist])
+        data = df.copy().rename(columns = {"district": dist, "state": "STATE"}).drop(columns = "year")
+        data.columns = [f"{c}_{yr}" if c not in ("STATE", dist) else c for c in data.columns]
+        
+        # Drop useless columns
+        data = data.drop_duplicates().dropna(axis = 1, how = "all")
+        
+        # Merge the data
+        merged = merged.merge(data, how = "left", left_on = ["STATE", dist], right_on = ["STATE", dist])
         print(f"    Geocoded {yr} elections   {now()}")
     
     # Make sure the output has the correct rows and columns
-    gdf = ensureValid(gdf)
-    cols  = list(gdf.columns)
+    merged = ensureValid(merged)
+    cols  = list(merged.columns)
     gmIdx = cols.index("geometry")
-    gdf = gdf[cols[:gmIdx] + cols[gmIdx+1:] + [cols[gmIdx]]]
-    print(f"Dataframe merged              {now()}")
-    
+    merged = merged[cols[:gmIdx] + cols[gmIdx+1:] + [cols[gmIdx]]]
+    print(f"Voting data geocoded          {now()}")
+
     # Output the file
-    gdf.to_csv(tbl("_MERGED.csv"))
-    gdf.to_file(cgdPath("CGD_MERGED.js", ""), driver = "GeoJSON", encoding = "UTF-8")
-    if rtrn:
-        return gdf
+    merged.to_csv(tbl("_MERGED.csv"))
+    merged.to_file(cgdPath("CGD_MERGED.js", ""), driver = "GeoJSON", encoding = "UTF-8")
