@@ -39,3 +39,5 @@ The first incarnation of this project was done in Spring 2019 as part of GEOG 17
 The project you see here was done entirely by myself, save for two shapefiles (CGDs 115 and 116) provided by the STKO Lab. The voting data come from the MIT Election Lab and the other CGD shapefiles come directly from USGS.
 
 I redid the project for a few reasons. First, because we had to finish the project in time for the end of the term, I wasn't fully satisfied with the results. The previous version included the same analysis of voting data but handled the geospatial aspect in a much more simplistic way. Second, I wanted to use different tools. I wrote all the code for the previous version in R, but I prefer Python, so now it's in Python. We also used ArcGIS before, but I did this entirely with open source software (QGIS, PostgreSQL, and OpenLayers). Third, I wrote the code in this version to be easily reusable. That means that I or anyone else can easily add new data as new elections occur.
+
+The poster for the group project can be seen [here](https://drive.google.com/file/d/1mxGxF_O4GJmrZ8ctpUhaFUgVHSbkkc6g/view).
