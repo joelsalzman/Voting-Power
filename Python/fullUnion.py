@@ -9,6 +9,7 @@ Created on Thu Nov 21 12:06:41 2019
 
 # Imports
 import geopandas as gpd
+import pandas as pd
 import numpy as np
 import os, time, sys
 from shapely.wkt import dumps, loads
@@ -92,31 +93,38 @@ def stackUnion(add, stack, thing, sliver_size=0.001):
 ### Makes sure fields stay full
 def fillFields(row):
     
-    # Make sure not to loop forever
-    iterations = 0
-    
     # Only act if there are null values in the row
     while len(row) != len(row.dropna()):
-        
-        # Set the numerical index
-        idx = 0
-        
+
         # Check the columns
+        good = len(row) != len(row.dropna())
         for col, val in row.items():
-            if "DIS" in str(col) and np.isnan(val):
+            
+            # Set the numerical index
+            idx = 0
+            
+            # Determine which columns to look at
+            if "DIS" or "STATE" in str(col):
+                key = "DIS" if "DIS" in str(col) else "STATE"
+                if key == "DIS":
+                    val = pd.to_numeric(val)
                 
-                # First try to set the value to the previous column's
-                if idx > 0 and not np.isnan(row.iloc[idx-1]):
-                    row.iloc[idx] = row.iloc[idx-1]
+                # Only fill in empty values
+                if not val:
                     
-                # If the previous column is empty, try setting the value to the next column's
-                elif not np.isnan(row.iloc[idx+1]):
-                    row.iloc[idx] = row.iloc[idx+1]
-                    
+                    # First try to set the value to the previous column's
+                    if idx > 0 and "DIS" in list(row.index)[idx-1] and row.iloc[idx-1]:
+                        row.iloc[idx] = row.iloc[idx-1]
+                        
+                    # If the previous column is empty, try setting the value to the next column's
+                    elif "DIS" in list(row.index)[idx+1] and row.iloc[idx+1]:
+                        row.iloc[idx] = row.iloc[idx+1]
+             
+            # Increment the index
             idx += 1
             
-        iterations += 1
-        if iterations == len(row):
+        # If no values were changed, break the loop
+        if good <= len(row) != len(row.dropna()):
             break
     
     return row
@@ -187,7 +195,7 @@ def stateUnion(st, cgds={}, out=True, reverse=False, stop=None):
                 additions[st].append(f"{k} {diff}")
             
             # Make sure the fields are in the right order and are full
-            full = full[sorted(full.columns)].apply(lambda r: fillFields(r))
+            full = full[sorted(full.columns)].apply(lambda r: fillFields(r), axis = 1)
             
             # Stop if requested
             if stop and str(stop) in k:
@@ -204,16 +212,16 @@ def stateUnion(st, cgds={}, out=True, reverse=False, stop=None):
 
 
 ### Does the state in separate halves
-def halfState(st, cgds={}):
+def halfState(st, cgds={}, cutoff=2009):
     
     if not len(cgds):
         cgds = getFiles("clean")
     print(f"Attempting halfState on {st}")
         
-    first  = stateUnion(st, cgds, False, False, 2009)[0]
-    second = stateUnion(st, cgds, False, True,  2011)[0]
+    first  = stateUnion(st, cgds, False, False, cutoff)[0]
+    second = stateUnion(st, cgds, False, True,  cutoff + 2)[0]
     both   = stackUnion(first, second, f"{st} Both")
-    bothFx = both[0][sorted(both[0].columns)].apply(lambda r: fillFields(r))
+    bothFx = both[0][sorted(both[0].columns)].apply(lambda r: fillFields(r), axis = 1)
     bothFx.to_file(cgdPath(f"{st}.js", "by_state"), driver = "GeoJSON", encoding = "UTF-8")
     
     return bothFx, {st:[]}
@@ -282,13 +290,11 @@ def allStates(cgds={}, reverse=False, start_at=None):
         
         # Perform the union
         union = stateUnion(st, clean, reverse)
-        lyrs.append(union[0])
-        
         if len(union[1][st]):
             del union
             union = halfState(st, clean)
         
-        union = union.apply(lambda r: fillFields(r))
+        lyrs.append(union[0].apply(lambda r: fillFields(r), axis = 1))
         
         # Print the information about the state union to text files
         for i in range(1, len(union)):
@@ -297,7 +303,7 @@ def allStates(cgds={}, reverse=False, start_at=None):
             with open(os.path.join(os.getcwd(), "Python", "logs", f"stateUnion_{key}.txt"), "a+") as f:
                 f.write(f"{st}: {info[st]}\n")
     
-    print(f"Total time elapsed: {now()}")
+    print(f"Total time elapsed:           {now()}")
     return lyrs
 
 
@@ -335,9 +341,21 @@ def fullUnion(lyrs={}):
                 failures.append(k)
                 continue
         
+        # Make sure all the fields are full
+        clip = clip.apply(lambda r: fillFields(r), axis=1)
+            
+        # Make sure all the fields are correct
+        for field in ("STATE", "DIS_2007", "DIS_2009", "DIS_2011"):
+            if field not in clip.columns or f"{field}_1" in clip.columns:
+                if not f"{field}_2" in clip.columns:
+                    print(f"{k} is missing {field}")
+                    continue
+                clip = clip.rename(columns = {f"{field}_1":field}).drop(columns = [f"{field}_2"])
+            
         full = clip if not len(full) else full.append(clip)
         
         print(f"    Added {k}{' '*(20 - len(k))} {now()}")
+        
         
     # Output
     full = ensureValid(full)
@@ -345,20 +363,3 @@ def fullUnion(lyrs={}):
     print(f"Union complete")
     if len(failures):
         print(failures)
-    
-    
-
-### Replaces a state's data in the full union
-def updateFull(state, file=""):
-    
-    # Get the files
-    full = gpd.read_file(cgdPath("CGD_UNION.js", ""), driver = "GeoJSON", encoding = "UTF-8")
-    if not len(file):
-        file = gpd.read_file(cgdPath(f"{state}.js", "by_state"), driver = "GeoJSON", encoding = "UTF-8")
-    
-    # Replace any existing rows with the state for the new file
-    full = full.loc[full["STATE"] != state].append(file)
-    print(f"Updated {state}")
-    
-    # Return the updated file
-    full.to_file(cgdPath("CGD_UNION.js", ""), driver = "GeoJSON", encoding = "UTF-8")

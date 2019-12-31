@@ -14,7 +14,7 @@ import sys
 sys.path.append(r"C:\Users\joelj\OneDrive\Documents\Projects\Voting\Python")
 from useful import *
 from prepGeoms import prepShapefiles, ensureValid
-from fullUnion import getFiles, stackUnion, fillFields
+from fullUnion import getFiles, stackUnion
     
 
 

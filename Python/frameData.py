@@ -97,3 +97,48 @@ def processData():
                   {"candidate":"winner","candidatevotes":"winVotes", "totalvotes":"totalVotes"})
         calculated[k].to_csv(tbl(f"{k}Margins.csv"), index = False)
     print("Processed data")
+    
+    
+
+### Processes data for Maine and Nebraska
+def processMENB():
+    
+    menb = pd.read_csv(tbl("menb.csv"))
+    
+    
+    ## Calculates the margins
+    def getMargins(key, df, mt):
+        first = pd.to_numeric(list(df.loc[df["rank"] == 1]["candidatevotes"])[0])
+        second = pd.to_numeric(list(df.loc[df["rank"] == 2]["candidatevotes"])[0])
+        
+        if mt == "raw":
+            return first - second
+        
+        total = pd.to_numeric(df.iloc[0][-1])
+        return (first / total) - (second / total)
+    
+    
+    # Cqlculate the margins
+    raw = menb.groupby(["state", "year", "district"]).apply(lambda df: getMargins(g, df, "raw"))
+    raw = pd.DataFrame(raw).reset_index().rename(columns = {0:"rawMargin"})
+    dec = menb.groupby(["state", "year", "district"]).apply(lambda df: getMargins(g, df, "dec"))
+    dec = pd.DataFrame(dec).reset_index().rename(columns = {0:"decMargin"})
+    
+    # Merge the files
+    keys = ["state", "year", "district"]
+    menbMerged = pd.merge(menb, pd.merge(raw, dec, left_on = keys, right_on = keys),
+                           left_on = keys, right_on = keys)
+    menbMerged = menbMerged.rename(columns = {"totalvotes ": "totalVotes"}).drop(
+                                     columns = ["party", "candidatevotes", "rank"])
+    
+    # Change the columns
+    menbMargins = None
+    for yr, df in menbMerged.groupby("year"):
+        dist = f"DIS_{int(yr)-1}"
+        data = df.copy().rename(columns = {"district": dist, "state": "STATE"}).drop(columns = "year")
+        data.columns = [f"{c}_{yr}" if c not in ["STATE", dist] else c for c in data.columns]
+        menbMargins = data if yr == min(menb.year) else pd.merge(
+                menbMargins, data, left_on = "STATE", right_on = "STATE").drop_duplicates()
+    
+    # Output the file
+    menbMargins.to_csv(tbl("menbMargins.csv"))

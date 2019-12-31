@@ -36,22 +36,29 @@ def utilityValues(file=""):
                 v -= 2 if row["STATE"] in ["NE", "ME"] else 0
                 electors.append(v)
             
+            # Multiply the margins by the number of electors that election affects
             electors = np.asarray(electors).astype(float)
             vals = np.multiply(vals, electors)
             
-            # Nebraska and Maine do proportional allocation
+            # Handle split allocation in Maine and Nebraska
             if row["STATE"] in ["NE", "ME"]:
-                pass
-                #GET DATA FOR INDIVIDUAL DISTRICTS#########################################
+                menbRow = menb
+                for c in cols:
+                    menbRow = menbRow.loc[menbRow[c] == row.at[c]]
+                menbVals = [menbRow.at[c] for c in cols]
+                vals = np.add(vals, menbVals)
                 
-
         # Return the average margin of victory across all relevant races
         return np.nanmean(vals)
     
     
-    # Prepare to add 
+    # Prepare to the geodata
     full = file.copy() if len(file) else gpd.read_file(cgdPath("CGD_MERGED.js", ""), driver="GeoJSON")
     full = ensureValid(full)
+    
+    # Prepare the other data
+    menb = pd.read_csv(tbl("menbMargins.csv"))
+    officeDict = {key:pd.read_csv(tbl(f'{key}Margins.csv')) for key in ("prez", "senate", "house")}
     
     # Add a utility value for each type of individual office
     for mt in ("raw", "dec"): 
@@ -66,21 +73,21 @@ def utilityValues(file=""):
             print(f"    Averaged {office} {mt}{' '*(16-len(office)-len(mt))}{now()}")
     
             # Find the worst possible margin of that type of election to use to normalize the values
-            worst = float(full[cols].max().max())
+            worst = officeDict[office][f"{mt}Margin"].max()
             
             # Normalize the values
             full[f"{o}_AVG{mt}Margin_nrml"] = full[f"{o}_AVG{mt}Margin"].apply(
-                    lambda v: 1 - (v / worst) if not np.isnan(v) else 0)
+                    lambda v: 1 - (float(v) / worst) if not np.isnan(v) else 0)
     
         # Combine values
         nrml = [full[f"{o}_AVG{mt}Margin_nrml"] for o in ("h", "s", "p")]
-        full[f"all_{mt}UTILITY"] = np.mean(np.array(nrml), axis = 0)
+        full[f"all_{mt}UTILITY"] = np.average(np.array(nrml), axis = 0)
         print(f"    Calculated {mt} utility{' '*(7-len(mt))}{now()}")
     
     # Output files
     simple = full.drop(columns = list(full.columns)[:list(full.columns).index("geometry")])
     simple.to_file(cgdPath("CGD_SIMPLE.js", ""), driver = "GeoJSON", encoding = "UTF-8")
-    print(f"Outputted Simple            {now()}")
+    print(f"Outputted Simple              {now()}")
     full.to_file(cgdPath("CGD_FINAL.js", ""), driver = "GeoJSON", encoding = "UTF-8")
-    full.to_csv(tbl("_FULL.csv"))
-    print(f"Outputted Full              {now()}")
+    full.to_csv(tbl("_FINAL.csv"))
+    print(f"Outputted Final               {now()}")
