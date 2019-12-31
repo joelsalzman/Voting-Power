@@ -31,7 +31,7 @@ Due to the Electoral College, not every state is as important to win. Presidenti
 Since each seat in Congress has the same power (geographically speaking), House and Senate utility values didn't have to change.
 
 ## Results
-There are eight sets of results to look at. I'll include a small discussion here about a few interesting results and hopefully soon have the interactive map up so that anyone who finds this page can explore the data themselves. For now, hang tight.
+Coming soon! If you don't see anything here, it's because I'm rerunning the analysis at this very moment. Check back in a few hours.
 
 ## Credits
 The first incarnation of this project was done in Spring 2019 as part of GEOG 176C at UCSB as a group project between Juan Miranda, Owen Karlenzig, and myself. The shapefiles were supplied by the STKO Lab at UCSB, led by Krysztof Janowicz (who was also the instructor for that class). I used a number of open source Python libraries (especially geopandas), including a [shapely version of ST_MakeValid](https://github.com/ftwillms/makevalid).
