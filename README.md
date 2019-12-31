@@ -16,6 +16,13 @@ Finally, we need to define which elections matter. This project looks at three t
 
 The final combined utility values represent how much votes mattered in that place between 1999 and 2019.
 
+> 1) Acquire and clean the data
+> 2) Calculate the margins in each relevant election
+> 3) Overlay maps of the congressional districts drawn between 1999 and 2019
+> 4) Merge the voting data with the geodata
+> 5) Calculate utility values
+> 6) Publish results
+
 ## Utility values
 A utility value represents how "good" something is. In this context, a 1 means that one vote was as important as possible. In other words, the tally was a tie. A 0 means that one vote was as unimportant as possible. The way I determined what a 0 should be was by finding the greatest historical margin for an election of that type. For instance, the greatest margin in any Senate race since 1999 was 3,150,737 (that's how much Feinstein beat Emken by in California in 2012), so the utility values for Senate races were found by this formula: Utility = (1 - (average_margin / 3150737)). That way, every value is between 0 and 1, and the lower values represent places with closer elections on average.
 
@@ -23,19 +30,11 @@ Due to the Electoral College, not every state is as important to win. Presidenti
 
 Since each seat in Congress has the same power (geographically speaking), House and Senate utility values didn't have to change.
 
-## The Process
-1) Acquire and clean the data
-2) Calculate the margins in each relevant election
-3) Overlay maps of the congressional districts drawn between 1999 and 2019
-4) Merge the voting data with the geodata
-5) Calculate utility values
-6) Publish results
-
 ## Results
 There are eight sets of results to look at. I'll include a small discussion here about a few interesting results and hopefully soon have the interactive map up so that anyone who finds this page can explore the data themselves. For now, hang tight.
 
 ## Credits
-The first incarnation of this project was done in Spring 2019 as part of GEOG 176C at UCSB as a group project between Juan Miranda, Owen Karlenzig, and myself. The shapefiles were supplied by the STKO Lab at UCSB, led by Krysztof Janowicz (who was also the instructor for that class). I used a number of open source Python libraries (especially geopandas), including a shapely version of ST_MakeValid created by ftwillms. [https://github.com/ftwillms/makevalid]
+The first incarnation of this project was done in Spring 2019 as part of GEOG 176C at UCSB as a group project between Juan Miranda, Owen Karlenzig, and myself. The shapefiles were supplied by the STKO Lab at UCSB, led by Krysztof Janowicz (who was also the instructor for that class). I used a number of open source Python libraries (especially geopandas), including a [shapely version of ST_MakeValid](https://github.com/ftwillms/makevalid).
 
 The project you see here was done entirely by myself, save for two shapefiles (CGDs 115 and 116) provided by the STKO Lab. The voting data come from the MIT Election Lab and the other CGD shapefiles come directly from USGS.
 
