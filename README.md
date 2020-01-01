@@ -1,8 +1,8 @@
 # Where do votes matter most?
-This project looks at where votes have mattered most in US federal elections since 1999. In this repository, you'll find all the code involved in the analysis, most of the data, and some of the results.
+This project looks at where votes have mattered most in US federal elections since 1999. This repo contains all the code and most of the data.
 
 ## How to answer the question
-How do we tell where votes matter most from a geographic perspective? By looking at where the margins have been closest in various elections. For instance, an election with a margin of 0 (a tie) is where a vote matters the most. So in order to figure out where votes matter most, we need to answer the following question:
+How do we tell where votes matter most from a geographic perspective? By looking at where the margins have been closest in various elections. For instance, an election with a margin of 0 (a tie) is where a vote matters the most. So in order to answer the question, we need to figure out the following:
 
 1) Where have elections been the closest?
 2) Which elections took place where?
@@ -31,7 +31,7 @@ Due to the Electoral College, not every state is as important to win. Presidenti
 Since each seat in Congress has the same power (geographically speaking), House and Senate utility values didn't have to change.
 
 ## Results
-Coming soon! If you don't see anything here, it's because I'm rerunning the analysis at this very moment. Check back in a few hours.
+If you don't see anything here, it's because I'm rerunning the analysis at this very moment. Check back in a few hours.
 
 ## Credits
 The first incarnation of this project was done in Spring 2019 as part of GEOG 176C at UCSB as a group project between Juan Miranda, Owen Karlenzig, and myself. The shapefiles were supplied by the STKO Lab at UCSB, led by Krysztof Janowicz (who was also the instructor for that class). I used a number of open source Python libraries (especially geopandas), including a [shapely version of ST_MakeValid](https://github.com/ftwillms/makevalid).
