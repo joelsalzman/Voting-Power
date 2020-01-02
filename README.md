@@ -32,7 +32,9 @@ Due to the Electoral College, not every state is equally important to win. Presi
 Since each seat in Congress has the same power (geographically speaking), House and Senate utility values didn't have to change.
 
 ## Results
-If you don't see anything here, it's because I'm rerunning the analysis at this very moment. Check back in a few hours.
+The best place in the country to vote in the past twenty years was Nevada. Changing districts around Las Vegas kept margins consistently close.
+
+An interactive map of all the data will be available at the end of January.
 
 ## Credits
 The first incarnation of this project was done in Spring 2019 as part of GEOG 176C at UCSB as a group project between [Juan Miranda](https://www.linkedin.com/in/juan-miranda-61a958138/), [Owen Karlenzig](https://www.linkedin.com/in/owen-karlenzig-95890a154/), and [myself](https://www.linkedin.com/in/joel-salzman-322891156/). The shapefiles were supplied by the [STKO Lab at UCSB](https://stko.geog.ucsb.edu/), led by Krysztof Janowicz (who was also the instructor for that class). The poster for the group project is [here](https://drive.google.com/file/d/1mxGxF_O4GJmrZ8ctpUhaFUgVHSbkkc6g/view).
