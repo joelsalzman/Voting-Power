@@ -32,7 +32,7 @@ Due to the Electoral College, not every state is equally important to win. Presi
 Since each seat in Congress has the same power (geographically speaking), House and Senate utility values didn't have to change.
 
 ## Results
-The best place in the country to vote in the past twenty years was Nevada. Changing districts around Las Vegas kept margins consistently close.
+The best place in the country to vote in the past twenty years was Nevada. Changing districts around Las Vegas kept margins consistently close. New Hampshire and Florida (particularly southern Florida, around Miami) are very good too. With a higher importance weighting for presidential elections, Florida becomes by far the best place to vote. When accounting for Congress as well, it ranks high, but is not the runaway leader.
 
 An interactive map of all the data will be available at the end of January.
 
