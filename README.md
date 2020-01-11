@@ -32,7 +32,7 @@ Due to the Electoral College, not every state is equally important to win. Presi
 Since each seat in Congress has the same power (geographically speaking), House and Senate utility values didn't have to change.
 
 ## Results
-The best place in the country to vote in the past twenty years was  evada, particularly around Las Vegas. Nevada's fairly small population is politically heterogeneous, which leads the thin margins in most races. New Hampshire was the second best and New Mexico was the third best. Washington DC was the worst (because DC residents don't have voting representation in Congress), followed by California and New York, which rank poorly due to their massive populations and the dominance of the Democratic party in both states. The highest margins in both presidential and Senate races occurred in California.
+The best place in the country to vote in the past twenty years was in Nevada, around the southern part of Las Vegas. Nevada's fairly small population is politically heterogeneous, which leads the thin margins in most races. New Hampshire was the second best and New Mexico was the third best. Washington DC was the worst (because DC residents don't have voting representation in Congress), followed by California and New York, which rank poorly due to their massive populations and the dominance of the Democratic party in both states. The highest margins in both presidential and Senate races occurred in California.
 
 An interactive map of all the data will be available at the end of January.
 
