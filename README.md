@@ -1,3 +1,7 @@
+# [CLICK HERE FOR INTERACTIVE MAP](https://joelsalzman.github.io/gdvp.html)
+
+
+
 # Where do votes matter most?
 This project looks at where votes have mattered most in US federal elections since 1999. This repo contains all the code and most of the data.
 
@@ -32,13 +36,15 @@ Due to the Electoral College, not every state is equally important to win. Presi
 Since each seat in Congress has the same power (geographically speaking), House and Senate utility values didn't have to change.
 
 ## Results
-The best place in the country to vote in the past twenty years was in Nevada, around the southern part of Las Vegas. Nevada's fairly small population is politically heterogeneous, which leads the thin margins in most races. New Hampshire was the second best and New Mexico was the third best. Washington DC was the worst (because DC residents don't have voting representation in Congress), followed by California and New York, which rank poorly due to their massive populations and the dominance of the Democratic party in both states. The highest margins in both presidential and Senate races occurred in California.
+The best place in the country to vote in the past twenty years was in Nevada, around the southern part of Las Vegas. Nevada's fairly small population is politically heterogeneous, which leads the thin margins in most races. New Hampshire was the second best and New Mexico was the third best. In many ways, this disputes the convential wisdom regarding swing states. The main reason why the best states to vote aren't necessarily the purplest is that there is an important distinction between where it is good to vote and where it makes the most sense to commit resources. The latter is a question asked during each election, while the former is a primarily academic question.
 
-An interactive map of all the data will be available by the end of March. I will also be using this dataset to write multiple research papers that will be out before June.
+Washington DC was the worst place to vote because DC residents don't have voting representation in Congress. The next two worst were California and New York, both of which rank poorly due to their massive populations and the dominance of the Democratic party. Nebraska also fares poorly because it is so solidly Republican despite its relatively small population. Notably, while Alabama is very uncompetitive overall, Georgia contains numerous regions with consistently close elections. 
+
+The results for individual race types are more intuitive. For presidential elections, Florida is the undisputed winner. Senate margins tend to mirror presidential margins, and are primarily a function of partisanship and population. House margins are far more geographically varied because of the equal population requirement, so they reflect partisanship rather than population.
+
+You can explore some of the data on my [website](joelsalzman.github.io/gdvp.html).
 
 ## Credits
 The first incarnation of this project was done in Spring 2019 as part of GEOG 176C at UCSB as a group project between [Juan Miranda](https://www.linkedin.com/in/juan-miranda-61a958138/), [Owen Karlenzig](https://www.linkedin.com/in/owen-karlenzig-95890a154/), and [myself](https://www.linkedin.com/in/joel-salzman-322891156/). The shapefiles were supplied by the [STKO Lab at UCSB](https://stko.geog.ucsb.edu/), led by Krysztof Janowicz (who was also the instructor for that class). The poster for the group project is [here](https://drive.google.com/file/d/1mxGxF_O4GJmrZ8ctpUhaFUgVHSbkkc6g/view).
 
-The project you see in this repo was done entirely by myself, save for two shapefiles (CGDs 115 and 116) provided by the STKO Lab. The voting data come from the MIT Election Lab, the State Boards of Maine and Nebraska (aggregated during the previous incarnation of the project), and the other CGD shapefiles come directly from USGS.
-
-I redid the project for a few reasons. First, because we had to finish the project in time for the end of the term, I wasn't fully satisfied with the results. The previous version included the same analysis of voting data but handled the geospatial aspect in a much more simplistic way. Second, I wanted to use different tools. I wrote all the code for the previous version in R, but I prefer Python, so now it's in Python. I used a number of open source Python libraries (especially geopandas), including a [shapely version of ST_MakeValid](https://github.com/ftwillms/makevalid). We also used ArcGIS before, but I did this entirely with open source software (QGIS, PostgreSQL, and OpenLayers). Third, I wrote the code in this version to be easily reusable. That means that I or anyone else can easily add new data as new elections occur.
+The project you see in this repo was done entirely by myself, save for two shapefiles (CGDs 115 and 116) provided by the STKO Lab. The voting data come from the MIT Election Lab, the State Boards of Maine and Nebraska (aggregated during the previous incarnation of the project), and the other CGD shapefiles come directly from USGS. It was done in Python using geopandas and a [shapely version of ST_MakeValid](https://github.com/ftwillms/makevalid), visualized in QGIS, and implemented online with Leaflet and JQuery.
