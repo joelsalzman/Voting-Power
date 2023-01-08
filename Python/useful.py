@@ -22,9 +22,14 @@ cgdPath = lambda file, folder="by_year": os.path.join(os.getcwd(), "GIS", "cgd",
 # Useful lists and dataframes
 years = [y for y in range(1999, 2020)]  # range of years to look at
 states = pd.read_csv(tbl("states.csv")) # state identifiers (name, abbr, fips) and electors by decade
-keepFromCSV = ["year", "state", "district",
-               "writein", "special", "runoff", "candidate", "party", "candidatevotes", "totalvotes"]
-newCols = ["runnerUp", "ruParty", "ruVotes", "rawMargin", "decMargin", "winner", "winVotes", "totalVotes"]
+keepFromCSV = [
+        "year", "state", "district", "writein", "special", "runoff", 
+        "candidate", "party", "candidatevotes", "totalvotes"
+    ]
+newCols = [
+        "runnerUp", "ruParty", "ruVotes", "rawMargin", 
+        "decMargin", "winner", "winVotes", "totalVotes"
+    ]
 
 ### Record times
 t0 = time.time()

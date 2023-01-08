@@ -12,7 +12,6 @@ import geopandas as gpd
 import pandas as pd
 import numpy as np
 import os, time, sys
-from shapely.wkt import dumps, loads
 from shapely.ops import unary_union
 sys.path.append(r"C:\Users\joelj\OneDrive\Documents\Projects\Voting\Python")
 from useful import *

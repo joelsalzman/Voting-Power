@@ -9,11 +9,10 @@ Created on Tue Dec  3 13:54:06 2019
 import geopandas as gpd
 import os, sys, json
 from shapely.geometry import shape, mapping
-from shapely.wkt import dumps, loads
 from shapely.geometry.multipolygon import MultiPolygon
+from shapely.validation import make_valid
 sys.path.append(r"C:\Users\joelj\OneDrive\Documents\Projects\Voting\Python")
 from useful import *
-from makevalid import make_geom_valid ### From https://github.com/ftwillms/makevalid
 
 
 
@@ -75,7 +74,7 @@ def roundCoords(shp, precision=0):
 def ensureValid(gdf, geom_type=MultiPolygon):
     
     gdf = gdf[~gdf.geometry.isna()]
-    gdf.geometry = gdf.geometry.apply(lambda g: make_geom_valid(g))
+    gdf.geometry = gdf.geometry.apply(lambda g: make_valid(g))
     gdf.geometry = gdf.geometry.apply(lambda g: geom_type([g]) if type(g) != geom_type else g)
     return gdf
 
@@ -97,11 +96,17 @@ def prepShapefiles():
         
         # Make sure the file has the correct fields
         if "STATE" not in shp.columns:
-            shp["STATE"] = [states.loc[states["FP"] == float(fp), "State"].values[0] for fp in shp["STATEFP"]]
+            shp["STATE"] = [
+                    states.loc[states["FP"] == float(fp), "State"].values[0] 
+                    for fp in shp["STATEFP"]
+                ]
         shp = shp.filter(items = keepInShp).dropna()
         shp.columns = [c if c not in keepInShp[-3:] else "DISTRICT" for c in shp.columns]
         if len(shp["STATE"][0]) == 2:
-            shp["STATE"] = [states.loc[states["Abbr"] == st, "State"].values[0] for st in shp["STATE"]]
+            shp["STATE"] = [
+                    states.loc[states["Abbr"] == st, "State"].values[0] 
+                    for st in shp["STATE"]
+                ]
         
         # Ensure there's only one row per district
         shp = shp.dissolve(by = ["STATE", "DISTRICT"])

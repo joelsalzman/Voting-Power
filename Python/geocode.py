@@ -21,7 +21,10 @@ from fullUnion import getFiles, stackUnion
 ### Pulls and cleans voting data
 def getVotingData(merge=True):
     
-    offices = {key:pd.read_csv(tbl(f'{key}Margins.csv')) for key in ("prez", "senate", "house")}
+    offices = {
+            key: pd.read_csv(tbl(f'{key}Margins.csv')) 
+            for key in ("prez", "senate", "house")
+        }
 
     # Prepare to merge the data by setting column names and types
     for o in offices.keys():
@@ -40,9 +43,10 @@ def getVotingData(merge=True):
     
     # Merge the voting data into one dataframe
     return offices["prez"].merge(
-                    offices["senate"], how="outer", left_on=["state", "year"], right_on=["state", "year"]
-            ).merge(
-                    offices["house"],  how="outer", left_on=["state", "year"], right_on=["state", "year"])
+            offices["senate"], how="outer", left_on=["state", "year"], right_on=["state", "year"]
+        ).merge(
+            offices["house"],  how="outer", left_on=["state", "year"], right_on=["state", "year"]
+        )
 
 
 
@@ -77,7 +81,12 @@ def addByYear(yr):
     
     # Merge the data with the shapefile
     try:
-        merged = shp.merge(df, how="left", left_on=["STATE", "DISTRICT"], right_on=["state", "district"])
+        merged = shp.merge(
+                df, 
+                how="left", 
+                left_on=["STATE", "DISTRICT"], 
+                right_on=["state", "district"]
+            )
         merged = merged.drop(columns = ["STATE", "DISTRICT", "year"])
         merged.to_file(cgdPath(f"cgdFrom_{yr}.js"), driver = 'GeoJSON', encoding = "UTF-8")
         print(f"    Merged {yr} to shp...")
@@ -108,14 +117,19 @@ def geocode(gdf=""):
         
         # Rename the columns
         dist = f"DIS_{int(yr)-1}"
-        data = df.copy().rename(columns = {"district": dist, "state": "STATE"}).drop(columns = "year")
+        data = df.rename(columns = {"district": dist, "state": "STATE"}).drop(columns = "year")
         data.columns = [f"{c}_{yr}" if c not in ("STATE", dist) else c for c in data.columns]
         
         # Drop useless columns
         data = data.drop_duplicates().dropna(axis = 1, how = "all")
         
         # Merge the data
-        merged = merged.merge(data, how = "left", left_on = ["STATE", dist], right_on = ["STATE", dist])
+        merged = merged.merge(
+                data, 
+                how = "left", 
+                left_on = ["STATE", dist], 
+                right_on = ["STATE", dist]
+            )
         print(f"    Geocoded {yr} elections   {now()}")
     
     # Make sure the output has the correct rows and columns
